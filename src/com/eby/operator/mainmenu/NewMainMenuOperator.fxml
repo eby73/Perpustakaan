@@ -65,7 +65,7 @@
       <FontAwesomeIconView fx:id="peminjamanIcon" fill="WHITE" glyphName="PAYPAL" layoutX="873.0" layoutY="239.0" size="68" />
       <FontAwesomeIconView fx:id="pengembalianIcon" fill="WHITE" glyphName="STACK_OVERFLOW" layoutX="1130.0" layoutY="236.0" size="68" />
       <Text fx:id="txtMenuHeader" fill="WHITE" layoutX="38.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Main Menu" />
-      <Text fx:id="txtDisable" fill="WHITE" layoutX="602.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fitur untuk admin">
+      <Text fx:id="txtDisable" layoutX="607.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fitur Disabled">
          <font>
             <Font size="14.0" />
          </font></Text>
@@ -77,7 +77,6 @@
          </styleClass>
       </Button>
       <FontAwesomeIconView fx:id="logOutIcon" fill="WHITE" glyphName="POWER_OFF" layoutX="1236.0" layoutY="64.0" size="21" />
-      <FontAwesomeIconView fill="#d02525" glyphName="BAN" layoutX="633.0" layoutY="234.0" size="55" />
    </children>
    <stylesheets>
       <URL value="@../../resources/css/MetroUIGlobal.css" />
