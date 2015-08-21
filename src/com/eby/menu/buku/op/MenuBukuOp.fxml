@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.menu.buku.op.MenuBukuOpController">
+   <children>
+      <AnchorPane prefHeight="51.0" prefWidth="1320.0" styleClass="header">
+         <children>
+            <Button fx:id="btBack" mnemonicParsing="false" onAction="#backAction" prefHeight="50.0" prefWidth="81.0">
+               <styleClass>
+                  <String fx:value="back-menu" />
+                  <String fx:value="radius" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="37.0" size="34" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btTambahMenu" alignment="BOTTOM_LEFT" layoutX="84.0" layoutY="62.0" mnemonicParsing="false" onAction="#tambahMenuAction" prefHeight="124.0" prefWidth="200.0" text="Tambah Buku" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btPenerbit" alignment="BOTTOM_LEFT" layoutX="544.0" layoutY="126.0" mnemonicParsing="false" onAction="#penerbitAction" prefHeight="60.0" prefWidth="100.0" text="Penerbit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightGreen" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btDaftar" alignment="BOTTOM_LEFT" layoutX="312.0" layoutY="62.0" mnemonicParsing="false" onAction="#daftarAction" prefHeight="124.0" prefWidth="200.0" text="Daftar Buku" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btCategory" alignment="BOTTOM_LEFT" layoutX="544.0" layoutY="62.0" mnemonicParsing="false" onAction="#categoryAction" prefHeight="60.0" prefWidth="100.0" text="Category" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightRed" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="158.0" layoutY="141.0" size="55" text="" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="150.0" layoutY="128.0" size="13" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LIST" layoutX="385.0" layoutY="143.0" size="55" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LEANPUB" layoutX="582.0" layoutY="92.0" size="21" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PAYPAL" layoutX="584.0" layoutY="157.0" size="21" />
+      <AnchorPane fx:id="paneView" layoutY="211.0" prefHeight="520.0" prefWidth="1320.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../resources/css/MetroUIGlobal.css" />
+      <URL value="@../../../resources/css/InsertIcon.css" />
+   </stylesheets>
+</AnchorPane>

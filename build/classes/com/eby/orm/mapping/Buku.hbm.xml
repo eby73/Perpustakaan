@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 16, 2015 10:48:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="perpustakaan" name="com.eby.orm.entity.Buku" optimistic-lock="version" table="buku">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.eby.orm.entity.Category" fetch="select" name="category">
+      <column name="category_id" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.eby.orm.entity.Penerbit" fetch="select" name="penerbit">
+      <column name="penerbit_id" not-null="true"/>
+    </many-to-one>
+    <property name="judul" type="string">
+      <column length="45" name="judul" not-null="true"/>
+    </property>
+    <property name="pengarang" type="string">
+      <column length="45" name="pengarang" not-null="true"/>
+    </property>
+    <property name="tahunTerbit" type="string">
+      <column length="5" name="tahun_terbit"/>
+    </property>
+    <property name="jumlahHalaman" type="string">
+      <column length="5" name="jumlah_halaman"/>
+    </property>
+    <property name="synopsis" type="string">
+      <column length="65535" name="synopsis"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="peminjamans" table="peminjaman">
+      <key>
+        <column name="buku_id" not-null="true"/>
+      </key>
+      <one-to-many class="com.eby.orm.entity.Peminjaman"/>
+    </set>
+  </class>
+</hibernate-mapping>

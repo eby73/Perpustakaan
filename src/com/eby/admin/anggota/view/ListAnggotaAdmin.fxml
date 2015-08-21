@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.anggota.view.ListAnggotaAdminController">
+   <children>
+      <TableView fx:id="tableAnggota" layoutX="68.0" layoutY="155.0" prefHeight="400.0" prefWidth="1186.0" />
+      <AnchorPane prefHeight="76.0" prefWidth="1320.0" styleClass="header">
+         <children>
+            <Text layoutX="137.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font-header" text="Daftar Anggota Perpustakaan">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="btBack" mnemonicParsing="false" onAction="#backAction" prefHeight="75.0" prefWidth="121.0">
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="back-menu" />
+               </styleClass></Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="46.0" layoutY="49.0" size="34" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btDelete" alignment="BASELINE_RIGHT" layoutX="143.0" layoutY="582.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="85.0" text="Delete" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-delete" />
+            <String fx:value="radius" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btEdit" alignment="BASELINE_RIGHT" layoutX="68.0" layoutY="582.0" mnemonicParsing="false" onAction="#EditAction" onMouseClicked="#editMouseClicked" prefHeight="35.0" prefWidth="75.0" text="Edit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-update" />
+            <String fx:value="radius" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="83.0" layoutY="605.0" size="15" />
+      <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="154.0" layoutY="604.0" size="15" />
+      <TextField fx:id="txtCari" layoutX="68.0" layoutY="109.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan nama" />
+      <FontAwesomeIconView fill="#837474" glyphName="SEARCH" layoutX="450.0" layoutY="128.0" size="13" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../resources/css/InsertIcon.css" />
+      <URL value="@../../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

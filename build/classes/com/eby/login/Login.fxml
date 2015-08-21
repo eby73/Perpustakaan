@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.glyphfont.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1320.0" styleClass="header-2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.login.LoginController">
+   <children>
+      <AnchorPane layoutX="484.0" layoutY="189.0" prefHeight="284.0" prefWidth="350.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btLogin" alignment="BASELINE_RIGHT" contentDisplay="CENTER" layoutX="220.0" layoutY="190.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="35.0" prefWidth="105.0" text="Sign In" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="button-login" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" layoutX="235.0" layoutY="215.0" size="21" />
+            <PasswordField fx:id="txtPass" layoutX="25.0" layoutY="133.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" />
+            <TextField fx:id="txtUser" layoutX="25.0" layoutY="79.0" prefHeight="35.0" prefWidth="300.0" promptText="Username" />
+            <FontAwesomeIconView fill="#838383" glyphName="USER" layoutX="302.0" layoutY="103.0" size="20" />
+            <FontAwesomeIconView fill="#838181" glyphName="LOCK" layoutX="303.0" layoutY="157.0" size="20" />
+            <AnchorPane layoutY="-3.0" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #4CAF50;">
+               <children>
+                  <Text fx:id="loginHeader" fill="WHITE" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In to your Account">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="249.0" prefHeight="35.0" prefWidth="350.0" style="-fx-background-color: #4CAF50;" />
+         </children>
+         <stylesheets>
+            <URL value="@../resources/css/InsertIcon.css" />
+            <URL value="@../resources/css/MetroUIGlobal.css" />
+            <URL value="@../resources/css/winDec.css" />
+         </stylesheets>
+      </AnchorPane>
+      <AnchorPane prefHeight="35.0" prefWidth="1320.0" styleClass="darkTeal">
+         <children>
+            <HBox fx:id="hBox" layoutX="1224.0" layoutY="4.0" prefHeight="25.0" prefWidth="90.0" stylesheets="@../resources/css/winDec.css">
+               <children>
+                  <Button fx:id="btFullscreen" mnemonicParsing="false" onAction="#fullScreenAction" prefWidth="30.0" styleClass="decoration-button-fullscreen" />
+                  <Button fx:id="btMaximize" mnemonicParsing="false" onAction="#maximizeAction" prefWidth="30.0" styleClass="decoration-button-maximize" />
+                  <Button fx:id="btClose" mnemonicParsing="false" onAction="#closeAction" prefWidth="30.0" styleClass="decoration-button-close" />
+               </children>
+            </HBox>
+            <Text fx:id="txtHeader" fill="WHITE" layoutX="15.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Woelocme to my first project" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../resources/css/InsertIcon.css" />
+      <URL value="@../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

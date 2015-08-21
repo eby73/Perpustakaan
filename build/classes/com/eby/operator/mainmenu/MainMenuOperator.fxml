@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1300.0" style="-fx-background-color: #D8D8D8;" stylesheets="@../../resources/css/InsertIcon.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.operator.mainmenu.MainMenuOperatorController">
+   <children>
+      <AnchorPane prefHeight="74.0" prefWidth="1301.0" styleClass="header">
+         <children>
+            <HBox layoutX="1173.0" layoutY="2.0" prefHeight="25.0" prefWidth="126.0" spacing="1.0" stylesheets="@../../resources/css/winDec.css">
+               <children>
+                  <Button fx:id="fullscreen" mnemonicParsing="false" onAction="#fullscreenAction" prefWidth="30.0" styleClass="decoration-button-fullscreen" />
+                  <Button fx:id="minimize" mnemonicParsing="false" onAction="#minimizeAction" prefHeight="25.0" prefWidth="30.0" styleClass="decoration-button-minimize" />
+                  <Button fx:id="maximize" mnemonicParsing="false" onAction="#maximizeAction" prefHeight="25.0" prefWidth="30.0" styleClass="decoration-button-maximize" />
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#closeAction" prefWidth="30.0" styleClass="decoration-button-close" />
+               </children>
+            </HBox>
+            <Text fill="#f8f4f4" layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perpustakaan Project">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneMenu" layoutX="-2.0" layoutY="74.0" prefHeight="615.0" prefWidth="140.0">
+         <children>
+            <ListView fx:id="listView" layoutX="1.0" onMouseClicked="#ListViewAction" prefHeight="615.0" prefWidth="140.0" stylesheets="@../../resources/css/listView.css" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="paneView" layoutX="139.0" layoutY="74.0" prefHeight="615.0" prefWidth="1162.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.book.edit.BukuEditAdminController">
+   <children>
+      <AnchorPane prefHeight="76.0" prefWidth="1320.0" styleClass="header">
+         <children>
+            <Button fx:id="btBackTo" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#backtoMainAction" prefHeight="75.0" prefWidth="121.0" text="Menu Utama" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="back-menu" />
+                  <String fx:value="radius" />
+               </styleClass></Button>
+            <Text layoutX="286.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font-header" text="Form Update data buku">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="btBack" alignment="BOTTOM_CENTER" layoutX="121.0" mnemonicParsing="false" onAction="#backAction" prefHeight="75.0" prefWidth="121.0" text="Menu Buku" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="back-menu" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="46.0" layoutY="46.0" size="34" />
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="173.0" layoutY="41.0" size="21" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btUpdate" alignment="BASELINE_RIGHT" layoutX="783.0" layoutY="444.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="35.0" prefWidth="85.0" text="Update" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-update" />
+            <String fx:value="radius" />
+         </styleClass></Button>
+      <GridPane hgap="10.0" layoutX="77.0" layoutY="125.0" vgap="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID BUKU :" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="JUDUL :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="CATEGORY :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="PENERBIT :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="PENGARANG :" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Thn TERBIT :" GridPane.rowIndex="5" />
+            <TextField fx:id="txtIdBuku" GridPane.columnIndex="1" />
+            <TextField fx:id="txtJudul" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPengarang" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtTahunTerbit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cbPenerbit" prefHeight="25.0" prefWidth="251.0" styleClass="field-level" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ListView fx:id="listCategory" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane hgap="10.0" layoutX="498.0" layoutY="125.0" vgap="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Jmlh HALAMAN :" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="SYNOPSIS :" GridPane.rowIndex="1" />
+            <TextField fx:id="txtJmlhHalaman" GridPane.columnIndex="1" />
+            <TextArea fx:id="txtSynopsis" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="250.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="793.0" layoutY="466.0" size="13" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../resources/css/InsertIcon.css" />
+      <URL value="@../../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

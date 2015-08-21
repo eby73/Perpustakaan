@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneParent" prefHeight="450.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.menu.peminjaman.PeminjamanMenuController">
+   <children>
+      <Text fx:id="txtPeminjaman" fill="#f2eded" layoutX="76.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peminjaman Menu" />
+      <Button fx:id="btTambahPinjam" alignment="BOTTOM_LEFT" layoutX="76.0" layoutY="130.0" mnemonicParsing="false" onAction="#peminjamanAction" prefHeight="124.0" prefWidth="200.0" text="Tambah Peminjaman" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="lightRed" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="iconP" fill="WHITE" glyphName="PAYPAL" layoutX="149.0" layoutY="206.0" size="55" />
+      <FontAwesomeIconView fx:id="iconPlus" fill="WHITE" glyphName="PLUS" layoutX="144.0" layoutY="185.0" size="13" />
+      <Button fx:id="btDaftar" alignment="BOTTOM_LEFT" layoutX="307.0" layoutY="131.0" mnemonicParsing="false" onAction="#daftarPeminjaman" prefHeight="124.0" prefWidth="200.0" text="Daftar Peminjaman" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="listIcon" fill="WHITE" glyphName="LIST" layoutX="380.0" layoutY="200.0" size="55" />
+      <FontAwesomeIconView fx:id="closeIcon" fill="WHITE" glyphName="CLOSE" layoutX="1289.0" layoutY="32.0" onMouseClicked="#closeAction" size="21" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+      <URL value="@../../resources/css/InsertIcon.css" />
+   </stylesheets>
+</AnchorPane>

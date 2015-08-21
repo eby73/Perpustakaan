@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 16, 2015 10:48:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="perpustakaan" name="com.eby.orm.entity.Penerbit" optimistic-lock="version" table="penerbit">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nama" type="string">
+      <column length="45" name="nama"/>
+    </property>
+    <property name="alamat" type="string">
+      <column length="45" name="alamat"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="bukus" table="buku">
+      <key>
+        <column name="penerbit_id" not-null="true"/>
+      </key>
+      <one-to-many class="com.eby.orm.entity.Buku"/>
+    </set>
+  </class>
+</hibernate-mapping>

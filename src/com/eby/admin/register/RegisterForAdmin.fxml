@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneView" prefHeight="520.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.register.RegisterForAdminController">
+   <children>
+      <GridPane fx:id="grid1" hgap="10.0" layoutX="58.0" layoutY="73.0" vgap="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="NAMA :" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="EMAIL :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="USERNAME :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="PASSWORD :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="LEVEL :" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNamaAdmin" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtEmail" prefHeight="30.0" styleClass="radius" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtUserName" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField fx:id="txtPasswd" onKeyReleased="#passKeyAction" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbLvl" prefHeight="30.0" prefWidth="250.0" styleClass="field-level" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button fx:id="btRegisterAdmin" alignment="BASELINE_RIGHT" layoutX="319.0" layoutY="336.0" mnemonicParsing="false" onAction="#RegisterAdminAction" prefHeight="35.0" prefWidth="90.0" text="Register" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-add" />
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+         </styleClass></Button>
+      <Separator layoutX="571.0" orientation="VERTICAL" prefHeight="520.0" prefWidth="47.0" />
+      <GridPane fx:id="grid2" hgap="10.0" layoutX="667.0" layoutY="66.0" vgap="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="NIS :" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="NAMA :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ALAMAT :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="KELAS :" GridPane.rowIndex="3" />
+            <TextField fx:id="txtNIS" prefHeight="30.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNamaAnggota" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="txtAlamat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtKelas" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button fx:id="btRegAnggota" alignment="BASELINE_RIGHT" layoutX="906.0" layoutY="340.0" mnemonicParsing="false" onAction="#RegAnggotaAction" prefHeight="35.0" prefWidth="90.0" text="Register" textFill="WHITE">
+         <styleClass>
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+            <String fx:value="bt-add" />
+         </styleClass></Button>
+      <Label fx:id="labelValid" layoutX="407.0" layoutY="123.0" prefHeight="30.0" prefWidth="30.0" styleClass="bt-add" stylesheets="@../../resources/css/InsertIcon.css" />
+      <FontAwesomeIconView fx:id="usPlusIcon" fill="WHITE" glyphName="USER_PLUS" layoutX="330.0" layoutY="358.0" size="15" text="" />
+      <FontAwesomeIconView fx:id="usPlusIcon1" fill="WHITE" glyphName="USER_PLUS" layoutX="917.0" layoutY="362.0" size="15" />
+      <FontAwesomeIconView fx:id="iconClose" fill="WHITE" glyphName="CLOSE" layoutX="1289.0" layoutY="32.0" onMouseClicked="#closeAction" size="21" />
+      <Text layoutX="44.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Form Registrasi Admin/Operator" />
+      <Text layoutX="638.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Form Registrasi Anggota" />
+      <Text fx:id="txtNotif" layoutX="415.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password harus 8 karakter atau lebih" wrappingWidth="148.447265625" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/InsertIcon.css" />
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

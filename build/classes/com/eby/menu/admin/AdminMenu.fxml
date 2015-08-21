@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneParent" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.menu.admin.AdminMenuController">
+   <stylesheets>
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+      <URL value="@../../resources/css/InsertIcon.css" />
+   </stylesheets>
+   <children>
+      <Button fx:id="btTambahUser" alignment="BOTTOM_LEFT" layoutX="99.0" layoutY="77.0" mnemonicParsing="false" onAction="#tambahUserAction" prefHeight="124.0" prefWidth="200.0" text="Tambah user" textFill="#f5efef">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="userIcon" fill="WHITE" glyphName="USER_PLUS" layoutX="168.0" layoutY="158.0" size="55" />
+      <Button fx:id="btDaftarUser" alignment="BOTTOM_LEFT" layoutX="329.0" layoutY="77.0" mnemonicParsing="false" onAction="#daftarUserAction" prefHeight="124.0" prefWidth="200.0" text="Daftar User" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="lightGreen" />
+         </styleClass></Button>
+      <FontAwesomeIconView fx:id="daftarIcon" fill="WHITE" glyphName="LIST" layoutX="402.0" layoutY="158.0" size="55" />
+      <AnchorPane prefHeight="50.0" prefWidth="1320.0">
+         <children>
+            <Button fx:id="btBack" mnemonicParsing="false" onAction="#backAction" prefHeight="50.0" prefWidth="81.0">
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="back-menu" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="37.0" size="34" />
+            <Text fx:id="txtUser" fill="WHITE" layoutX="90.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User/Admin Menu" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneView" layoutY="220.0" prefHeight="510.0" prefWidth="1320.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneView" prefHeight="520.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.book.add.BukuAddController">
+   <children>
+      <GridPane fx:id="gridPane1" hgap="10.0" layoutX="56.0" layoutY="63.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="JUDUL :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="CATEGORY :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="PENERBIT :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="PENGARANG :" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Thn TERBIT :" GridPane.rowIndex="5" />
+            <TextField fx:id="txtJudul" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbPenerbit" onKeyReleased="#comboReleased" prefHeight="30.0" prefWidth="250.0" styleClass="field-level" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtThnTerbit" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtPengarang" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID BUKU :" />
+            <TextField fx:id="txtIdBuku" prefHeight="30.0" GridPane.columnIndex="1" />
+            <ListView fx:id="listCategory" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPane2" hgap="10.0" layoutX="474.0" layoutY="63.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="250.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="SYNOPSIS :" GridPane.rowIndex="1" />
+            <TextArea fx:id="txtSynopsis" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Jmlh HALAMAN :" />
+            <TextField fx:id="txtJmlhHal" prefHeight="30.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane hgap="20.0" layoutX="654.0" layoutY="403.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Text fx:id="Header" fill="WHITE" layoutX="56.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Buku">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="btAdd" alignment="BASELINE_RIGHT" layoutX="599.0" layoutY="378.0" mnemonicParsing="false" onAction="#addAction" prefHeight="35.0" prefWidth="91.0" text="Tambah" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-add" />
+            <String fx:value="radius" />
+         </styleClass></Button>
+      <FontAwesomeIconView fx:id="iconPlus" fill="WHITE" glyphName="PLUS" layoutX="612.0" layoutY="400.0" size="13" />
+      <FontAwesomeIconView fx:id="closeIcon" fill="WHITE" glyphName="CLOSE" layoutX="1284.0" layoutY="27.0" onMouseClicked="#closeAction" size="21" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/InsertIcon.css" />
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

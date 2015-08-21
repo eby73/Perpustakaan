@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneParent" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.menu.buku.NewBookMenuController">
+   <stylesheets>
+      <URL value="@../../resources/css/InsertIcon.css" />
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+   <children>
+      <Button fx:id="btTambahBuku" alignment="BOTTOM_LEFT" layoutX="82.0" layoutY="61.0" mnemonicParsing="false" onAction="#tambahAction" prefHeight="124.0" prefWidth="200.0" text="Tambah Buku" textFill="WHITE">
+         <styleClass>
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="bukuIcon" fill="#f5f4f4" glyphName="BOOK" layoutX="156.0" layoutY="138.0" size="55" />
+      <FontAwesomeIconView fx:id="tambahIcon" fill="#f8f7f7" glyphName="PLUS" layoutX="147.0" layoutY="123.0" size="13" />
+      <Button fx:id="btDaftarBuku" alignment="BOTTOM_LEFT" layoutX="314.0" layoutY="62.0" mnemonicParsing="false" onAction="#daftarAction" prefHeight="124.0" prefWidth="200.0" text="Daftar Buku" textFill="#f8f6f6">
+         <styleClass>
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="listIcon" fill="#ebe9e9" glyphName="LIST" layoutX="391.0" layoutY="140.0" size="55" />
+      <Button fx:id="btCategory" alignment="BOTTOM_LEFT" layoutX="545.0" layoutY="62.0" mnemonicParsing="false" onAction="#categoryAction" prefHeight="60.0" prefWidth="100.0" text="Category" textFill="#f5f3f3">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="lightRed" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btPenerbit" alignment="BOTTOM_LEFT" layoutX="545.0" layoutY="127.0" mnemonicParsing="false" onAction="#penerbitAction" prefHeight="60.0" prefWidth="100.0" text="Penerbit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+            <String fx:value="lightGreen" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="categoryIcon" fill="#f5f2f2" glyphName="LEANPUB" layoutX="584.0" layoutY="94.0" size="21" />
+      <FontAwesomeIconView fx:id="penerbitIcon" fill="#f8f5f5" glyphName="PINTEREST_P" layoutX="588.0" layoutY="158.0" size="21" />
+      <AnchorPane prefHeight="50.0" prefWidth="1320.0">
+         <children>
+            <Button fx:id="btBack" mnemonicParsing="false" onAction="#backAction" prefHeight="50.0" prefWidth="81.0" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="segoe-font" />
+                  <String fx:value="back-menu" />
+               </styleClass>
+            </Button>
+            <Text fx:id="txtMainMenu" fill="WHITE" layoutX="98.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Buku" />
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="37.0" size="34" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneView" layoutY="210.0" prefHeight="520.0" prefWidth="1320.0" />
+   </children>
+</AnchorPane>

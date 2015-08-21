@@ -1,0 +1,1216 @@
+/**
+ * metroui.org.ua/global.html
+ */
+.black {
+    -fx-background-radius: 0;
+    -fx-background-color: #000000 ;
+}
+.white {
+    -fx-background-radius: 0;
+    -fx-background-color: #ffffff  ;
+}
+.lime {
+    -fx-background-radius: 0;
+    -fx-background-color: #a4c400  ;
+}
+.green {
+    -fx-background-radius: 0;
+    -fx-background-color: #60a917  ;
+}
+.emerald {
+    -fx-background-radius: 0;
+    -fx-background-color: #008a00  ;
+}
+.teal {
+    -fx-background-radius: 0;
+    -fx-background-color: #00aba9  ;
+}
+.cyan {
+    -fx-background-radius: 0;
+    -fx-background-color: #1ba1e2  ;
+}
+.cobalt {
+    -fx-background-color: #0050ef  ;
+}
+.indigo {
+    -fx-background-radius: 0;
+    -fx-background-color: #6a00ff  ;
+}
+.violet {
+    -fx-background-radius: 0;
+    -fx-background-color: #aa00ff  ;
+}
+.pink {
+    -fx-background-radius: 0;
+    -fx-background-color: #dc4fad  ;
+}
+.magenta {
+    -fx-background-radius: 0;
+    -fx-background-color: #d80073  ;
+}
+.crimson {
+    -fx-background-radius: 0;
+    -fx-background-color: #a20025  ;
+}
+.red {
+    -fx-background-radius: 0;
+    -fx-background-color: #e51400  ;
+}
+.orange {
+    -fx-background-radius: 0;
+    -fx-background-color: #fa6800  ;
+}
+.amber {
+    -fx-background-radius: 0;
+    -fx-background-color: #f0a30a  ;
+}
+.yellow {
+    -fx-background-radius: 0;
+    -fx-background-color: #e3c800  ;
+}
+.brown {
+    -fx-background-radius: 0;
+    -fx-background-color: #825a2c  ;
+}
+.olive {
+    -fx-background-radius: 0;
+    -fx-background-color: #6d8764  ;
+}
+.steel {
+    -fx-background-radius: 0;
+    -fx-background-color: #647687  ;
+}
+.mauve {
+    -fx-background-radius: 0;
+    -fx-background-color: #76608a  ;
+}
+.taupe {
+    -fx-background-radius: 0;
+    -fx-background-color: #87794e  ;
+}
+.gray {
+    -fx-background-radius: 0;
+    -fx-background-color: #555555  ;
+}
+.dark {
+    -fx-background-radius: 0;
+    -fx-background-color: #333333  ;
+}
+.darker {
+    -fx-background-radius: 0;
+    -fx-background-color: #222222  ;
+}
+.transparent {
+    -fx-background-radius: 0;
+    -fx-background-color: transparent  ;
+}
+.darkBrown {
+    -fx-background-radius: 0;
+    -fx-background-color: #63362f  ;
+}
+.darkCrimson {
+    -fx-background-radius: 0;
+    -fx-background-color: #640024  ;
+}
+.darkMagenta {
+    -fx-background-radius: 0;
+    -fx-background-color: #81003c  ;
+}
+.darkIndigo {
+    -fx-background-radius: 0;
+    -fx-background-color: #4b0096  ;
+}
+.darkCyan {
+    -fx-background-radius: 0;
+    -fx-background-color: #1b6eae  ;
+}
+.darkCobalt {
+    -fx-background-radius: 0;
+    -fx-background-color: #00356a  ;
+}
+.darkTeal {
+    -fx-background-radius: 0;
+    -fx-background-color: #004050  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkEmerald {
+    -fx-background-radius: 0;
+    -fx-background-color: #003e00  ;
+}
+.darkGreen {
+    -fx-background-radius: 0;
+    -fx-background-color: #128023  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkOrange {
+    -fx-background-radius: 0;
+    -fx-background-color: #bf5a15  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkRed {
+    -fx-background-radius: 0;
+    -fx-background-color: #9a1616  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkPink {
+    -fx-background-radius: 0;
+    -fx-background-color: #9a165a  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkViolet {
+    -fx-background-radius: 0;
+    -fx-background-color: #57169a  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.darkBlue {
+    -fx-background-radius: 0;
+    -fx-background-color: #16499a  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+.lightBlue {
+    -fx-background-radius: 0;
+    -fx-background-color: #4390df  ;
+}
+.lightRed {
+    -fx-background-radius: 0;
+    -fx-background-color: #ff2d19  ;
+}
+.lightGreen {
+    -fx-background-radius: 0;
+    -fx-background-color: #4CAF50  ;
+}
+.lighterBlue {
+    -fx-background-radius: 0;
+    -fx-background-color: #00ccff  ;
+}
+.lightTeal {
+    -fx-background-radius: 0;
+    -fx-background-color: #45fffd  ;
+}
+.lightOlive {
+    -fx-background-radius: 0;
+    -fx-background-color: #78aa1c  ;
+}
+.lightOrange {
+    -fx-background-radius: 0;
+    -fx-background-color: #c29008  ;
+}
+.lightPink {
+    -fx-background-radius: 0;
+    -fx-background-color: #f472d0  ;
+}
+.grayDark {
+    -fx-background-radius: 0;
+    -fx-background-color: #333333  ;
+}
+.grayDarker {
+    -fx-background-radius: 0;
+    -fx-background-color: #222222  ;
+}
+.grayLight {
+    -fx-background-radius: 0;
+    -fx-background-color: #999999  ;
+}
+.grayLighter {
+    -fx-background-radius: 0;
+    -fx-background-color: #eeeeee  ;
+}
+.blue {
+    -fx-background-radius: 0;
+    -fx-background-color: #00aff0  ;
+}
+.black:hover {
+    -fx-background-color: #000000  ;
+}
+.white:hover {
+    -fx-background-color: #ffffff  ;
+}
+.lime:hover {
+    -fx-background-color: #a4c400  ;
+}
+.green:hover {
+    -fx-background-color: #60a917  ;
+}
+.emerald:hover {
+    -fx-background-color: #008a00  ;
+}
+.teal:hover {
+    -fx-background-color: #00aba9  ;
+}
+.cyan:hover {
+    -fx-background-color: #1ba1e2  ;
+}
+.cobalt:hover {
+    -fx-background-color: #0050ef  ;
+}
+.indigo:hover {
+    -fx-background-color: #6a00ff  ;
+}
+.violet:hover {
+    -fx-background-color: #aa00ff  ;
+}
+.pink:hover {
+    -fx-background-color: #dc4fad  ;
+}
+.magenta:hover {
+    -fx-background-color: #d80073  ;
+}
+.crimson:hover {
+    -fx-background-color: #a20025  ;
+}
+.red:hover {
+    -fx-background-color: #e51400  ;
+}
+.orange:hover {
+    -fx-background-color: #fa6800  ;
+}
+.amber:hover {
+    -fx-background-color: #f0a30a  ;
+}
+.yellow:hover {
+    -fx-background-color: #e3c800  ;
+}
+.brown:hover {
+    -fx-background-color: #825a2c  ;
+}
+.olive:hover {
+    -fx-background-color: #6d8764  ;
+}
+.steel:hover {
+    -fx-background-color: #647687  ;
+}
+.mauve:hover {
+    -fx-background-color: #76608a  ;
+}
+.taupe:hover {
+    -fx-background-color: #87794e  ;
+}
+.gray:hover {
+    -fx-background-color: #555555  ;
+}
+.dark:hover {
+    -fx-background-color: #333333  ;
+}
+.darker:hover {
+    -fx-background-color: #222222  ;
+}
+.transparent:hover {
+    -fx-background-color: transparent  ;
+}
+.darkBrown:hover {
+    -fx-background-color: #63362f  ;
+}
+.darkCrimson:hover {
+    -fx-background-color: #640024  ;
+}
+.darkMagenta:hover {
+    -fx-background-color: #81003c  ;
+}
+.darkIndigo:hover {
+    -fx-background-color: #4b00b6 ;
+}
+.darkCyan:hover {
+    -fx-background-color: #1b6eae ;
+}
+.darkCobalt:hover {
+    -fx-background-color: #00356a  ;
+}
+/*.darkTeal:hover {
+    -fx-background-color: #45fffd  ;
+    -fx-text-fill: black;
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}*/
+.darkEmerald:hover {
+    -fx-background-color: #003e00  ;
+}
+.darkGreen:hover{
+/*    -fx-background-color: #7ad61d  ;
+    -fx-text-fill: #000000;*/
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.darkOrange:hover {
+/*    -fx-background-color: #c29008  ;
+    -fx-text-fill: black;*/
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.darkRed:hover {
+/*    -fx-background-color: #ff2d19  ;
+    -fx-text-fill: black;*/
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.darkPink:hover {
+/*    -fx-background-color: #f472d0  ;
+    -fx-text-fill: black;*/
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.darkViolet:hover {
+    -fx-background-color: #57169a  ;
+}
+.darkBlue:hover {
+/*    -fx-background-color: #4390df  ;
+    -fx-text-fill: black;*/
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.lightBlue:hover {
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.lightTeal:hover {
+    -fx-background-color: #45fffd  ;
+}
+.lightOlive:hover {
+    -fx-background-color: #78aa1c  ;
+}
+.lightOrange:hover {
+    -fx-background-color: #c29008  ;
+}
+.lightPink:hover {
+    -fx-background-color: #f472d0  ;
+}
+.lightRed:hover {
+    -fx-text-color: white;
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.lightGreen:hover {
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+.grayDark:hover {
+    -fx-background-color: #333333  ;
+}
+.grayDarker:hover {
+    -fx-background-color: #222222  ;
+}
+.grayLight:hover {
+    -fx-background-color: #999999  ;
+}
+.grayLighter:hover {
+    -fx-background-color: #eeeeee  ;
+}
+.blue:hover {
+    -fx-background-color: #00aff0  ;
+}
+.fg-black:hover {
+    color: #000000  ;
+}
+.fg-white:hover {
+    color: #ffffff  ;
+}
+.fg-lime:hover {
+    color: #a4c400  ;
+}
+.fg-green:hover {
+    color: #60a917  ;
+}
+.fg-emerald:hover {
+    color: #008a00  ;
+}
+.fg-teal:hover {
+    color: #00aba9  ;
+}
+.fg-cyan:hover {
+    color: #1ba1e2  ;
+}
+.fg-cobalt:hover {
+    color: #0050ef  ;
+}
+.fg-indigo:hover {
+    color: #6a00ff  ;
+}
+.fg-violet:hover {
+    color: #aa00ff  ;
+}
+.fg-pink:hover {
+    color: #dc4fad  ;
+}
+.fg-magenta:hover {
+    color: #d80073  ;
+}
+.fg-crimson:hover {
+    color: #a20025  ;
+}
+.fg-red:hover {
+    color: #e51400  ;
+}
+.fg-orange:hover {
+    color: #fa6800  ;
+}
+.fg-amber:hover {
+    color: #f0a30a  ;
+}
+.fg-yellow:hover {
+    color: #e3c800  ;
+}
+.fg-brown:hover {
+    color: #825a2c  ;
+}
+.fg-olive:hover {
+    color: #6d8764  ;
+}
+.fg-steel:hover {
+    color: #647687  ;
+}
+.fg-mauve:hover {
+    color: #76608a  ;
+}
+.fg-taupe:hover {
+    color: #87794e  ;
+}
+.fg-gray:hover {
+    color: #555555  ;
+}
+.fg-dark:hover {
+    color: #333333  ;
+}
+.fg-darker:hover {
+    color: #222222  ;
+}
+.fg-transparent:hover {
+    color: transparent  ;
+}
+.fg-darkBrown:hover {
+    color: #63362f  ;
+}
+.fg-darkCrimson:hover {
+    color: #640024  ;
+}
+.fg-darkMagenta:hover {
+    color: #81003c  ;
+}
+.fg-darkIndigo:hover {
+    color: #4b0096  ;
+}
+.fg-darkCyan:hover {
+    color: #1b6eae  ;
+}
+.fg-darkCobalt:hover {
+    color: #00356a  ;
+}
+.fg-darkTeal:hover {
+    color: #004050  ;
+}
+.fg-darkEmerald:hover {
+    color: #003e00  ;
+}
+.fg-darkGreen:hover {
+    color: #128023  ;
+}
+.fg-darkOrange:hover {
+    color: #bf5a15  ;
+}
+.fg-darkRed:hover {
+    color: #9a1616  ;
+}
+.fg-darkPink:hover {
+    color: #9a165a  ;
+}
+.fg-darkViolet:hover {
+    color: #57169a  ;
+}
+.fg-darkBlue:hover {
+    color: #16499a  ;
+}
+.fg-lightBlue:hover {
+    color: #4390df  ;
+}
+.fg-lightTeal:hover {
+    color: #45fffd  ;
+}
+.fg-lightOlive:hover {
+    color: #78aa1c  ;
+}
+.fg-lightOrange:hover {
+    color: #c29008  ;
+}
+.fg-lightPink:hover {
+    color: #f472d0  ;
+}
+.fg-lightRed:hover {
+    color: #ff2d19  ;
+}
+.fg-lightGreen:hover {
+    color: #7ad61d  ;
+}
+.fg-grayDark:hover {
+    color: #333333  ;
+}
+.fg-grayDarker:hover {
+    color: #222222  ;
+}
+.fg-grayLight:hover {
+    color: #999999  ;
+}
+.fg-grayLighter:hover {
+    color: #eeeeee  ;
+}
+.fg-blue:hover {
+    color: #00aff0  ;
+}
+.black:active {
+    -fx-background-color: #000000  ;
+}
+.white:active {
+    -fx-background-color: #ffffff  ;
+}
+.lime:active {
+    -fx-background-color: #a4c400  ;
+}
+.green:active {
+    -fx-background-color: #60a917  ;
+}
+.emerald:active {
+    -fx-background-color: #008a00  ;
+}
+.teal:active {
+    -fx-background-color: #00aba9  ;
+}
+.cyan:active {
+    -fx-background-color: #1ba1e2  ;
+}
+.cobalt:active {
+    -fx-background-color: #0050ef  ;
+}
+.indigo:active {
+    -fx-background-color: #6a00ff  ;
+}
+.violet:active {
+    -fx-background-color: #aa00ff  ;
+}
+.pink:active {
+    -fx-background-color: #dc4fad  ;
+}
+.magenta:active {
+    -fx-background-color: #d80073  ;
+}
+.crimson:active {
+    -fx-background-color: #a20025  ;
+}
+.red:active {
+    -fx-background-color: #e51400  ;
+}
+.orange:active {
+    -fx-background-color: #fa6800  ;
+}
+.amber:active {
+    -fx-background-color: #f0a30a  ;
+}
+.yellow:active {
+    -fx-background-color: #e3c800  ;
+}
+.brown:active {
+    -fx-background-color: #825a2c  ;
+}
+.olive:active {
+    -fx-background-color: #6d8764  ;
+}
+.steel:active {
+    -fx-background-color: #647687  ;
+}
+.mauve:active {
+    -fx-background-color: #76608a  ;
+}
+.taupe:active {
+    -fx-background-color: #87794e  ;
+}
+.gray:active {
+    -fx-background-color: #555555  ;
+}
+.dark:active {
+    -fx-background-color: #333333  ;
+}
+.darker:active {
+    -fx-background-color: #222222  ;
+}
+.transparent:active {
+    -fx-background-color: transparent  ;
+}
+.darkBrown:active {
+    -fx-background-color: #63362f  ;
+}
+.darkCrimson:active {
+    -fx-background-color: #640024  ;
+}
+.darkMagenta:active {
+    -fx-background-color: #81003c  ;
+}
+.darkIndigo:active {
+    -fx-background-color: #4b0096  ;
+}
+.darkCyan:active {
+    -fx-background-color: #1b6eae  ;
+}
+.darkCobalt:active {
+    -fx-background-color: #00356a  ;
+}
+.darkTeal:active {
+    -fx-background-color: #004050  ;
+}
+.darkEmerald:active {
+    -fx-background-color: #003e00  ;
+}
+.darkGreen:active {
+    -fx-background-color: #128023  ;
+}
+.darkOrange:active {
+    -fx-background-color: #bf5a15  ;
+}
+.darkRed:active {
+    -fx-background-color: #9a1600  ;
+}
+.darkPink:active {
+    -fx-background-color: #9a165a  ;
+}
+.darkViolet:active {
+    -fx-background-color: #57169a  ;
+}
+.darkBlue:active {
+    -fx-background-color: #16499a  ;
+}
+.lightBlue:active {
+    -fx-background-color: #4390df  ;
+}
+.lightTeal:active {
+    -fx-background-color: #45fffd  ;
+}
+.lightOlive:active {
+    -fx-background-color: #78aa1c  ;
+}
+.lightOrange:active {
+    -fx-background-color: #c29008  ;
+}
+.lightPink:active {
+    -fx-background-color: #f472d0  ;
+}
+.lightRed:active {
+    -fx-background-color: #ff2d19  ;
+}
+.lightGreen:active {
+    -fx-background-color: #7ad61d  ;
+}
+.grayDark:active {
+    -fx-background-color: #333333  ;
+}
+.grayDarker:active {
+    -fx-background-color: #222222  ;
+}
+.grayLight:active {
+    -fx-background-color: #999999  ;
+}
+.grayLighter:active {
+    -fx-background-color: #eeeeee  ;
+}
+.blue:active {
+    -fx-background-color: #00aff0  ;
+}
+.fg-black:active {
+    color: #000000  ;
+}
+.fg-white:active {
+    color: #ffffff  ;
+}
+.fg-lime:active {
+    color: #a4c400  ;
+}
+.fg-green:active {
+    color: #60a917  ;
+}
+.fg-emerald:active {
+    color: #008a00  ;
+}
+.fg-teal:active {
+    color: #00aba9  ;
+}
+.fg-cyan:active {
+    color: #1ba1e2  ;
+}
+.fg-cobalt:active {
+    color: #0050ef  ;
+}
+.fg-indigo:active {
+    color: #6a00ff  ;
+}
+.fg-violet:active {
+    color: #aa00ff  ;
+}
+.fg-pink:active {
+    color: #dc4fad  ;
+}
+.fg-magenta:active {
+    color: #d80073  ;
+}
+.fg-crimson:active {
+    color: #a20025  ;
+}
+.fg-red:active {
+    color: #e51400  ;
+}
+.fg-orange:active {
+    color: #fa6800  ;
+}
+.fg-amber:active {
+    color: #f0a30a  ;
+}
+.fg-yellow:active {
+    color: #e3c800  ;
+}
+.fg-brown:active {
+    color: #825a2c  ;
+}
+.fg-olive:active {
+    color: #6d8764  ;
+}
+.fg-steel:active {
+    color: #647687  ;
+}
+.fg-mauve:active {
+    color: #76608a  ;
+}
+.fg-taupe:active {
+    color: #87794e  ;
+}
+.fg-gray:active {
+    color: #555555  ;
+}
+.fg-dark:active {
+    color: #333333  ;
+}
+.fg-darker:active {
+    color: #222222  ;
+}
+.fg-transparent:active {
+    color: transparent  ;
+}
+.fg-darkBrown:active {
+    color: #63362f  ;
+}
+.fg-darkCrimson:active {
+    color: #640024  ;
+}
+.fg-darkMagenta:active {
+    color: #81003c  ;
+}
+.fg-darkIndigo:active {
+    color: #4b0096  ;
+}
+.fg-darkCyan:active {
+    color: #1b6eae  ;
+}
+.fg-darkCobalt:active {
+    color: #00356a  ;
+}
+.fg-darkTeal:active {
+    color: #004050  ;
+}
+.fg-darkEmerald:active {
+    color: #003e00  ;
+}
+.fg-darkGreen:active {
+    color: #128023  ;
+}
+.fg-darkOrange:active {
+    color: #bf5a15  ;
+}
+.fg-darkRed:active {
+    color: #9a1616  ;
+}
+.fg-darkPink:active {
+    color: #9a165a  ;
+}
+.fg-darkViolet:active {
+    color: #57169a  ;
+}
+.fg-darkBlue:active {
+    color: #16499a  ;
+}
+.fg-lightBlue:active {
+    color: #4390df  ;
+}
+.fg-lightTeal:active {
+    color: #45fffd  ;
+}
+.fg-lightOlive:active {
+    color: #78aa1c  ;
+}
+.fg-lightOrange:active {
+    color: #c29008  ;
+}
+.fg-lightPink:active {
+    color: #f472d0  ;
+}
+.fg-lightRed:active {
+    color: #ff2d19  ;
+}
+.fg-lightGreen:active {
+    color: #7ad61d  ;
+}
+.fg-grayDark:active {
+    color: #333333  ;
+}
+.fg-grayDarker:active {
+    color: #222222  ;
+}
+.fg-grayLight:active {
+    color: #999999  ;
+}
+.fg-grayLighter:active {
+    color: #eeeeee  ;
+}
+.fg-blue:active {
+    color: #00aff0  ;
+}
+.focus-black:focus {
+    -fx-background-color: #000000  ;
+}
+.focus-white:focus {
+    -fx-background-color: #ffffff  ;
+}
+.focus-lime:focus {
+    -fx-background-color: #a4c400  ;
+}
+.focus-green:focus {
+    -fx-background-color: #60a917  ;
+}
+.focus-emerald:focus {
+    -fx-background-color: #008a00  ;
+}
+.focus-teal:focus {
+    -fx-background-color: #00aba9  ;
+}
+.focus-cyan:focus {
+    -fx-background-color: #1ba1e2  ;
+}
+.focus-cobalt:focus {
+    -fx-background-color: #0050ef  ;
+}
+.focus-indigo:focus {
+    -fx-background-color: #6a00ff  ;
+}
+.focus-violet:focus {
+    -fx-background-color: #aa00ff  ;
+}
+.focus-pink:focus {
+    -fx-background-color: #dc4fad  ;
+}
+.focus-magenta:focus {
+    -fx-background-color: #d80073  ;
+}
+.focus-crimson:focus {
+    -fx-background-color: #a20025  ;
+}
+.focus-red:focus {
+    -fx-background-color: #e51400  ;
+}
+.focus-orange:focus {
+    -fx-background-color: #fa6800  ;
+}
+.focus-amber:focus {
+    -fx-background-color: #f0a30a  ;
+}
+.focus-yellow:focus {
+    -fx-background-color: #e3c800  ;
+}
+.focus-brown:focus {
+    -fx-background-color: #825a2c  ;
+}
+.focus-olive:focus {
+    -fx-background-color: #6d8764  ;
+}
+.focus-steel:focus {
+    -fx-background-color: #647687  ;
+}
+.focus-mauve:focus {
+    -fx-background-color: #76608a  ;
+}
+.focus-taupe:focus {
+    -fx-background-color: #87794e  ;
+}
+.focus-gray:focus {
+    -fx-background-color: #555555  ;
+}
+.focus-dark:focus {
+    -fx-background-color: #333333  ;
+}
+.focus-darker:focus {
+    -fx-background-color: #222222  ;
+}
+.focus-transparent:focus {
+    -fx-background-color: transparent  ;
+}
+.focus-darkBrown:focus {
+    -fx-background-color: #63362f  ;
+}
+.focus-darkCrimson:focus {
+    -fx-background-color: #640024  ;
+}
+.focus-darkMagenta:focus {
+    -fx-background-color: #81003c  ;
+}
+.focus-darkIndigo:focus {
+    -fx-background-color: #4b0096  ;
+}
+.focus-darkCyan:focus {
+    -fx-background-color: #1b6eae  ;
+}
+.focus-darkCobalt:focus {
+    -fx-background-color: #00356a  ;
+}
+.focus-darkTeal:focus {
+    -fx-background-color: #004050  ;
+}
+.focus-darkEmerald:focus {
+    -fx-background-color: #003e00  ;
+}
+.focus-darkGreen:focus {
+    -fx-background-color: #128023  ;
+}
+.focus-darkOrange:focus {
+    -fx-background-color: #bf5a15  ;
+}
+.focus-darkRed:focus {
+    -fx-background-color: #9a1616  ;
+}
+.focus-darkPink:focus {
+    -fx-background-color: #9a165a  ;
+}
+.focus-darkViolet:focus {
+    -fx-background-color: #57169a  ;
+}
+.focus-darkBlue:focus {
+    -fx-background-color: #16499a  ;
+}
+.focus-lightBlue:focus {
+    -fx-background-color: #4390df  ;
+}
+.focus-lightTeal:focus {
+    -fx-background-color: #45fffd  ;
+}
+.focus-lightOlive:focus {
+    -fx-background-color: #78aa1c  ;
+}
+.focus-lightOrange:focus {
+    -fx-background-color: #c29008  ;
+}
+.focus-lightPink:focus {
+    -fx-background-color: #f472d0  ;
+}
+.focus-lightRed:focus {
+    -fx-background-color: #ff2d19  ;
+}
+.focus-lightGreen:focus {
+    -fx-background-color: #7ad61d  ;
+}
+.focus-grayDark:focus {
+    -fx-background-color: #333333  ;
+}
+.focus-grayDarker:focus {
+    -fx-background-color: #222222  ;
+}
+.focus-grayLight:focus {
+    -fx-background-color: #999999  ;
+}
+.focus-grayLighter:focus {
+    -fx-background-color: #eeeeee  ;
+}
+.focus-blue:focus {
+    -fx-background-color: #00aff0  ;
+}
+.fg-focus-black:focus {
+    color: #000000  ;
+}
+.fg-focus-white:focus {
+    color: #ffffff  ;
+}
+.fg-focus-lime:focus {
+    color: #a4c400  ;
+}
+.fg-focus-green:focus {
+    color: #60a917  ;
+}
+.fg-focus-emerald:focus {
+    color: #008a00  ;
+}
+.fg-focus-teal:focus {
+    color: #00aba9  ;
+}
+.fg-focus-cyan:focus {
+    color: #1ba1e2  ;
+}
+.fg-focus-cobalt:focus {
+    color: #0050ef  ;
+}
+.fg-focus-indigo:focus {
+    color: #6a00ff  ;
+}
+.fg-focus-violet:focus {
+    color: #aa00ff  ;
+}
+.fg-focus-pink:focus {
+    color: #dc4fad  ;
+}
+.fg-focus-magenta:focus {
+    color: #d80073  ;
+}
+.fg-focus-crimson:focus {
+    color: #a20025  ;
+}
+.fg-focus-red:focus {
+    color: #e51400  ;
+}
+.fg-focus-orange:focus {
+    color: #fa6800  ;
+}
+.fg-focus-amber:focus {
+    color: #f0a30a  ;
+}
+.fg-focus-yellow:focus {
+    color: #e3c800  ;
+}
+.fg-focus-brown:focus {
+    color: #825a2c  ;
+}
+.fg-focus-olive:focus {
+    color: #6d8764  ;
+}
+
+
+.radius{
+    -fx-background-radius: 0;
+}
+
+.label-welcome{
+    -fx-font-size: 13pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.segoe-font{
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-fill: white;
+}
+
+.segoe-font-menu{
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-fill: white;
+}
+
+
+.close-color{
+    -fx-background-color:#ffffff ;
+}
+
+.close-color:hover{
+    -fx-background-color:#000000 ;
+}
+
+.darkPurple{
+    -fx-background-color: #603cba  ;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+
+.darkPurple:hover{
+/*    -fx-background-color: #9f00a7  ;
+    -fx-text-fill: #000000;*/
+    -fx-border-color:white;
+    -fx-border-style:solid;
+}
+.segoe-font-header{
+    -fx-font-size: 13pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-fill: white;
+}
+
+.pane-login{
+    -fx-background-color: #16499a;
+}
+
+.login-color {
+    -fx-background-radius: 0;
+    -fx-background-color: #16499a  ;
+}
+.login-color:hover {
+    -fx-background-radius: 0;
+    -fx-background-color: #4390df  ;
+}
+
+.facebook-color{
+    -fx-background-color: #3b5998;
+}
+
+.facebook-color:hover{
+    -fx-background-color: #3b5998;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+
+.github-color{
+    -fx-background-color: #222222;
+}
+
+.github-color:hover{
+    -fx-background-color: #222222;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+
+.bt-add{
+    -fx-background-color: #2196F3;
+}
+.bt-add:hover{
+    -fx-background-color: #1976D2;
+/*    -fx-border-color: white;
+    -fx-border-style: solid;*/
+}
+
+.bt-update{
+    -fx-background-color: #FF5722;
+}
+.bt-update:hover{
+    -fx-background-color: #E64A19;
+/*    -fx-border-color: white;
+    -fx-border-style: solid;*/
+}
+
+.bt-delete{
+    -fx-background-color: #F44336;
+}
+.bt-delete:hover{
+    -fx-background-color: #D32F2F;
+/*    -fx-border-color: white;
+    -fx-border-style: solid;*/
+}
+
+.lightPurple{
+    -fx-background-color: #9C27B0;
+}
+
+.lightPurple:hover{
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+
+.header-2{
+    -fx-background-color: #455A64;
+}

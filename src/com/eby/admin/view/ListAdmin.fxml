@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.view.ListAdminController">
+   <children>
+      <AnchorPane prefHeight="76.0" prefWidth="1320.0" styleClass="header" stylesheets="@../../resources/css/InsertIcon.css">
+         <children>
+            <Text fill="WHITE" layoutX="138.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Admin dan Operator">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutY="-1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="75.0" prefWidth="121.0">
+               <styleClass>
+                  <String fx:value="back-menu" />
+                  <String fx:value="radius" />
+               </styleClass></Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="46.0" layoutY="48.0" size="34" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableAdmin" layoutX="65.0" layoutY="159.0" prefHeight="380.0" prefWidth="1192.0" />
+      <Button fx:id="btDelete" alignment="BASELINE_RIGHT" layoutX="134.0" layoutY="572.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="85.0" text="delete" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-delete" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btEdit" alignment="BASELINE_RIGHT" layoutX="64.0" layoutY="572.0" mnemonicParsing="false" onAction="#mouseAction" prefHeight="35.0" prefWidth="70.0" text="Edit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-update" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="77.0" layoutY="594.0" size="13" />
+      <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="149.0" layoutY="593.0" size="13" />
+      <TextField fx:id="txtCari" layoutX="65.0" layoutY="107.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan nama" />
+      <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="445.0" layoutY="126.0" size="13" />
+      <FontAwesomeIconView fill="#837d7d" glyphName="SEARCH" layoutX="445.0" layoutY="126.0" size="13" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/InsertIcon.css" />
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.mainmenu.NewMainMenuAdminController">
+   <children>
+      <Button fx:id="btBukuMenu" alignment="BOTTOM_LEFT" layoutX="38.0" layoutY="145.0" mnemonicParsing="false" onAction="#bukuMenuAction" prefHeight="148.0" prefWidth="240.0" text="Buku" textFill="#fcf7f7">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="lightBlue" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="bukuIcon" fill="#f8eeee" glyphName="BOOK" layoutX="126.0" layoutY="244.0" size="68" />
+      <Button fx:id="btAnggota" alignment="BOTTOM_LEFT" layoutX="286.0" layoutY="145.0" mnemonicParsing="false" onAction="#anggotaAction" prefHeight="148.0" prefWidth="240.0" text="Anggota" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="lightBlue" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass></Button>
+      <Button fx:id="btAdmin" alignment="BOTTOM_LEFT" layoutX="535.0" layoutY="145.0" mnemonicParsing="false" onAction="#adminAction" prefHeight="148.0" prefWidth="240.0" text="User/Admin" textFill="#ebe8e8">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="lightBlue" />
+            <String fx:value="radius" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="AnggotaIcon" fill="WHITE" glyphName="USERS" layoutX="370.0" layoutY="243.0" size="68" />
+      <FontAwesomeIconView fx:id="userIcon" fill="#f8f7f7" glyphName="USER" layoutX="628.0" layoutY="245.0" size="68" />
+      <AnchorPane fx:id="paneSubMenu" layoutY="320.0" prefHeight="410.0" prefWidth="1320.0" />
+      <Button fx:id="btPeminjaman" alignment="BOTTOM_LEFT" layoutX="784.0" layoutY="146.0" mnemonicParsing="false" onAction="#peminjamanAction" prefHeight="148.0" prefWidth="240.0" text="Peminjaman" textFill="#ebe8e8">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font-menu" />
+            <String fx:value="lightPurple" />
+         </styleClass>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fx:id="peminjamanIcon" fill="#f2eaea" glyphName="PAYPAL" layoutX="870.0" layoutY="244.0" size="68" />
+      <Button fx:id="btPengembalian" alignment="BOTTOM_LEFT" layoutX="1033.0" layoutY="146.0" mnemonicParsing="false" onAction="#pengembalianAction" prefHeight="148.0" prefWidth="240.0" text="Pengembalian" textFill="#f2efef">
+         <styleClass>
+            <String fx:value="lightRed" />
+            <String fx:value="radius" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="pengembalianIcon" fill="WHITE" glyphName="STACK_OVERFLOW" layoutX="1126.0" layoutY="243.0" size="68" />
+      <AnchorPane prefHeight="35.0" prefWidth="1320.0" styleClass="darkTeal">
+         <children>
+            <HBox fx:id="hBox" layoutX="1228.0" layoutY="4.0" prefHeight="25.0" prefWidth="90.0" stylesheets="@../../resources/css/winDec.css">
+               <children>
+                  <Button fx:id="brFullScreen" mnemonicParsing="false" onAction="#fullScreenAction" prefHeight="25.0" prefWidth="30.0" styleClass="decoration-button-fullscreen" />
+                  <Button fx:id="btMaximize" mnemonicParsing="false" onAction="#maximizeAction" prefWidth="30.0" styleClass="decoration-button-maximize" />
+                  <Button fx:id="btClose" mnemonicParsing="false" onAction="#closeAction" prefWidth="30.0" styleClass="decoration-button-close" />
+               </children>
+            </HBox>
+            <Text fx:id="txtHeader" fill="WHITE" layoutX="16.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Welcome to my first project">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fx:id="txtMain" fill="WHITE" layoutX="38.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font-header" text="Main Menu" />
+      <Button fx:id="btLogOut" alignment="BOTTOM_CENTER" layoutX="1208.0" layoutY="35.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="56.0" prefWidth="65.0" text="Logout" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="header" />
+            <String fx:value="logOut" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="logOutIcon" fill="WHITE" glyphName="POWER_OFF" layoutX="1232.0" layoutY="65.0" size="21" styleClass="logOut-icon" />
+      <FontAwesomeIconView fx:id="hideIcon" fill="WHITE" glyphName="CHEVRON_CIRCLE_LEFT" layoutX="29.0" layoutY="108.0" onMouseClicked="#hideFollow" size="13" />
+      <Button fx:id="btGithub" layoutY="67.0" minHeight="30.0" mnemonicParsing="false" onAction="#githubAction" prefWidth="30.0">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="github-color" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btFacebook" layoutY="36.0" minHeight="30.0" mnemonicParsing="false" onAction="#facebookAction" prefWidth="30.0">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="facebook-color" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="showIcon" fill="WHITE" glyphName="CHEVRON_CIRCLE_RIGHT" layoutY="108.0" onMouseClicked="#showFollow" size="13" />
+      <FontAwesomeIconView fx:id="fIcon" fill="WHITE" glyphName="FACEBOOK" layoutX="11.0" layoutY="55.0" size="13" />
+      <FontAwesomeIconView fx:id="gIcon" fill="WHITE" glyphName="GITHUB" layoutX="9.0" layoutY="86.0" size="13" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/InsertIcon.css" />
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

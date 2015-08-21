@@ -1,0 +1,532 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 15, 2015, 1:30:56 AM
+    Author     : eby
+*/
+
+
+.button-admin{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/admin.png");
+    -fx-background-repeat:no-repeat;
+}
+.button-admin:hover{
+    -fx-background-color: #aaa;
+    -fx-background-image:url("/com/eby/resources/icon/admin.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: left;
+}
+
+.button-anggota{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/anggota.png");
+    -fx-background-repeat:no-repeat;
+}
+.button-anggota:hover{
+    -fx-background-color: #aaa;
+    -fx-background-image:url("/com/eby/resources/icon/anggota.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: left;
+}
+.button-addPinjam{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/addPinjam.png");
+    -fx-background-repeat:no-repeat;
+}
+.button-addPinjam:hover{
+    -fx-background-color: #aaa;
+    -fx-background-image:url("/com/eby/resources/icon/addPinjam.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: left;
+}
+.button-cek{
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/valid.png");
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+.button-cek:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+}
+
+.background-login{
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/valid.png");
+    -fx-background-position: 20% 50%;
+    -fx-background-repeat:no-repeat;
+}
+.background-login:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+}
+.button-edit{
+    -fx-background-radius: 0;
+    -fx-background-color: #E6AA1E;
+    -fx-background-image:url("/com/eby/resources/icon/edit.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 15% 50%; 
+}
+
+.button-edit:hover{
+    -fx-background-color: #EFBE4E;
+    -fx-background-repeat:no-repeat;
+}
+
+.button-delete{
+    -fx-background-color: #FC7386;
+    -fx-background-radius: 0;
+    -fx-background-image:url("/com/eby/resources/icon/delete.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 15% 50%; 
+}
+
+.button-delete:hover{
+    -fx-background-color: #EA5760;
+    -fx-background-repeat:no-repeat;
+}
+
+.button-add{
+    -fx-background-radius: 0;
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/add.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 15% 50%;
+}
+.button-add:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+
+}
+
+.button-add-user{
+    -fx-background-radius: 0;
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/add-user.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 15% 50%;
+}
+.button-add-user:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+
+}
+.button-update{
+    -fx-background-radius: 0;
+    -fx-background-color: #E6AA1E;
+    -fx-background-image:url("/com/eby/resources/icon/update.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 15% 50%; 
+}
+.button-update:hover{
+    -fx-background-color: #EFBE4E;
+    -fx-background-repeat:no-repeat;
+}
+
+.decoration-button-list-buku{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/list-book.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.decoration-button-list-buku:hover{
+    -fx-background-color: #aaa;
+    -fx-background-image:url("/com/eby/resources/icon/list-book.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: left;
+
+}
+
+.decoration-button-add-buku-menu{
+    -fx-background-radius: 0;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/book_add.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.decoration-button-add-buku-menu:hover{
+    -fx-background-color: #bababa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/book_add.png");
+    -fx-background-repeat:no-repeat;
+    -fx-text-fill: #AD0000;
+}
+
+.header{
+    -fx-background-color: #455A64;
+}
+
+.button-login{
+    -fx-background-color: #4CAF50  ;
+}
+.button-login:hover{
+    -fx-background-color: #7ad61d  ;
+}
+
+.decoration-button-logout{
+    -fx-background-image:url("/com/eby/resources/icon/Logout.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: left;
+    -fx-alligment: right;
+}
+
+.background-library{
+    -fx-background-image:url("/com/eby/resources/icon/library.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: 97% 50%;
+}
+
+.add-category{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/add-category.png");
+    -fx-background-repeat:no-repeat;
+}
+.add-category:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/add-category.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-menu-category{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/category.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-menu-category:hover{
+    -fx-background-color: #bababa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/category.png");
+    -fx-background-repeat:no-repeat;
+    -fx-text-fill: #AD0000;
+}
+
+.button-menu-penerbit{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/penerbit.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-menu-penerbit:hover{
+    -fx-background-color: #bababa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/penerbit.png");
+    -fx-background-repeat:no-repeat;
+    -fx-text-fill: #AD0000;
+}
+
+.button-menu-pengarang{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/pengarang.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-menu-pengarang:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/pengarang.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-cari{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/search.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-cari:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/search.png");
+    -fx-background-repeat:no-repeat;
+}
+.button-return{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/kembalikan.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-return:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/kembalikan.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-cari{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/cari.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-cari:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/cari.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.back-icon{
+    -fx-background-radius: 0;
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/arrowLeft.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: center;
+}
+.back-icon:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+}
+
+
+.longBack-icon{
+    -fx-background-radius: 0;
+    -fx-background-color: #0A7A94;
+    -fx-background-image:url("/com/eby/resources/icon/LongBackHover.png");
+    -fx-background-position: center 20%;
+    -fx-background-repeat:no-repeat;
+}
+
+.longBack-icon:hover{
+    -fx-background-color: #0D96B5;
+    -fx-background-repeat:no-repeat;
+}
+
+.pane-back{
+    -fx-background-color: null;
+    -fx-background-radius: 13;
+}
+
+.button-refresh{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/refresh.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-refresh:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/refresh.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-search-data{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/search-black.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-search-data:hover{
+    -fx-background-color: #aaa;
+    -fx-background-position: left;
+    -fx-background-image:url("/com/eby/resources/icon/search-black.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-close{
+    -fx-background-radius: 0;
+    -fx-background-color: #0050ef;
+    -fx-background-position: center;
+    -fx-background-image:url("/com/eby/resources/icon/close.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.button-close:hover{
+    -fx-background-color: #0050ef;
+    -fx-background-position: center;
+    -fx-background-image:url("/com/eby/resources/icon/close-hover_1.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.label-close{
+    -fx-background-radius: 0;
+    -fx-background-color: #0A7A94;
+    -fx-background-position: center;
+    -fx-background-image:url("/com/eby/resources/icon/close.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.label-close:hover{
+    -fx-background-color: #0A7A94;
+    -fx-background-position: center;
+    -fx-background-image:url("/com/eby/resources/icon/close-hover.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.tool-tip-color{
+    -fx-background-color: #bababa;
+}
+
+.valid-label{
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/valid.png");
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+
+.invalid-label{
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/invalid.png");
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+
+.quest-label{
+    -fx-background-color: null;
+    -fx-background-image:url("/com/eby/resources/icon/tanya.png");
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+
+.field-username{
+    -fx-background-color: #16499a;
+    -fx-background-image: url(/com/eby/resources/icon/user.png);
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+
+.field-password{
+    -fx-background-color: #16499a;
+    -fx-background-image: url(/com/eby/resources/icon/password.png);
+    -fx-background-position:center;
+    -fx-background-repeat: no-repeat;
+}
+
+.panel-background{
+    -fx-background-radius: 5;
+    -fx-background-color: #CCE0DA;
+}
+
+.icon-add{
+    -fx-background-image:url("/com/eby/resources/icon/add.png");
+}
+
+.icon-white{
+    -fx-color: white;
+}
+
+.panel-login{
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(0,193,62,0.9);
+}
+.field-level{
+    -fx-background-radius: 0;
+    -fx-background-color: #d3d3d3;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+
+.field-level:hover{
+    -fx-background-radius: 0;
+    -fx-background-color: white;
+
+}
+
+.home-panel{
+    -fx-background-color: #333333;
+}
+
+.icon-book-color{
+    -fx-background-radius: 0;
+    -fx-background-color: indigo;
+}
+
+.icon-book-color:hover{
+    -fx-background-color:purple;
+}
+
+.pane-sub{
+    -fx-background-color: #607D8B;
+}
+
+/*.text-field{
+    -fx-background-color: #d3d3d3;
+    -fx-background-radius: 0;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-text-fill: black;
+    -fx-text-color: black;
+}
+.text-field:hover{
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 0;
+    -fx-border-style: solid;
+}*/
+
+.border-style{
+    -fx-border-style: solid;
+    -fx-border-color: white;
+}
+
+
+.back-menu{
+    -fx-background-color: #455A64;
+}
+
+.back-menu:hover{
+    -fx-background-color: #455A75;
+}
+
+.pane-menu-other{
+    -fx-background-color: #0050e5;
+}
+
+.logOut{
+    -fx-background-color: #455A64;
+    -fx-text-color: white;
+    -fx-text-fill: white;
+}
+
+.logOut:hover{
+    -fx-background-color: #455A64;
+    -fx-text-fill: D32F2F;
+}
+
+.logOut-icon{
+    -fx-background-color: navy;
+    -fx-text-color: white;
+}
+
+.logOut-icon:hover:focused{
+    -fx-background-color: navy;
+    -fx-text-fill: #9a1616;
+}
+
+.pane-list{
+   
+}
+
+.label-login{
+    -fx-background-color: #d3d3d3;
+}

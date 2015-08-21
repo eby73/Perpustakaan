@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneParent" prefHeight="450.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.pengembalian.PengembalianController">
+   <children>
+      <GridPane fx:id="grid" hgap="10.0" layoutX="91.0" layoutY="69.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="105.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID PINJAM :" />
+            <Text fx:id="textNIS" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="NIS :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID BUKU :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="LEBIH WAKTU :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="DENDA :" GridPane.rowIndex="4" />
+            <TextField fx:id="txtIdPinjam" prefHeight="30.0" promptText="Masukkan ID Peminjaman" styleClass="radius" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNIS" disable="true" editable="false" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtIdBuku" disable="true" editable="false" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtLamaPinjam" disable="true" editable="false" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtDenda" disable="true" editable="false" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Button fx:id="btKembaliBuku" alignment="CENTER" layoutX="327.0" layoutY="316.0" mnemonicParsing="false" onAction="#KembaliBukuAction" prefHeight="35.0" prefWidth="128.0" text="KEMBALI BUKU" textFill="WHITE">
+         <styleClass>
+            <String fx:value="segoe-font" />
+            <String fx:value="radius" />
+            <String fx:value="bt-add" />
+         </styleClass></Button>
+      <Text fx:id="txtHeader" fill="WHITE" layoutX="90.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengembalian Form" />
+      <Button fx:id="btCari" alignment="BASELINE_RIGHT" layoutX="455.0" layoutY="69.0" mnemonicParsing="false" onAction="#CariAction" prefHeight="29.0" prefWidth="30.0">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="segoe-font" />
+            <String fx:value="bt-add" />
+         </styleClass>
+      </Button>
+      <Text fx:id="txtHari" layoutX="458.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Hari" />
+      <FontAwesomeIconView fx:id="cariIcon" fill="WHITE" glyphName="SEARCH" layoutX="464.0" layoutY="88.0" size="13" />
+      <FontAwesomeIconView fx:id="closeIcon" fill="WHITE" glyphName="CLOSE" layoutX="1289.0" layoutY="32.0" onMouseClicked="#closeAction" size="21" />
+   </children>
+   <stylesheets>
+      <URL value="@../resources/css/InsertIcon.css" />
+      <URL value="@../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

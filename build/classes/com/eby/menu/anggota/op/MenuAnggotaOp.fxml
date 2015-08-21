@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.menu.anggota.op.MenuAnggotaOpController">
+   <stylesheets>
+      <URL value="@../../../resources/css/MetroUIGlobal.css" />
+      <URL value="@../../../resources/css/InsertIcon.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane prefHeight="51.0" prefWidth="1320.0" styleClass="header">
+         <children>
+            <Button fx:id="btBack" mnemonicParsing="false" onAction="#backAction" prefHeight="50.0" prefWidth="81.0" styleClass="back-menu" />
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="37.0" size="34" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneView" layoutY="230.0" prefHeight="500.0" prefWidth="1320.0" />
+      <Button fx:id="btTambah" alignment="BOTTOM_LEFT" layoutX="84.0" layoutY="79.0" mnemonicParsing="false" onAction="#tambahAction" prefHeight="124.0" prefWidth="200.0" text="Tambah Anggota" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightRed" />
+         </styleClass></Button>
+      <Button fx:id="btDaftar" alignment="BOTTOM_LEFT" layoutX="316.0" layoutY="79.0" mnemonicParsing="false" onAction="#daftarAction" prefHeight="124.0" prefWidth="200.0" text="Daftar Anggota" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightGreen" />
+         </styleClass></Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="155.0" layoutY="150.0" size="55" text="" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LIST" layoutX="389.0" layoutY="156.0" size="55" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="151.0" layoutY="148.0" size="13" />
+   </children>
+</AnchorPane>

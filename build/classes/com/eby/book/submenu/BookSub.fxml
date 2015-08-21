@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="1162.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.book.submenu.BookSubController">
+   <children>
+      <ToolBar layoutX="5.0" layoutY="36.0" prefHeight="56.0" prefWidth="1161.0" stylesheets="@../../resources/css/InsertIcon.css">
+        <items>
+          <Button fx:id="btCategory" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#categoryAction" prefHeight="35.0" prefWidth="108.0" styleClass="button-menu-category" text="Category" />
+            <Button fx:id="btPenerbit" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#penerbitAction" prefHeight="35.0" prefWidth="105.0" styleClass="button-menu-penerbit" text="Penerbit" />
+        </items>
+      </ToolBar>
+      <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Form Attribut Buku">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="paneView" layoutY="92.0" prefHeight="524.0" prefWidth="1162.0" stylesheets="@../resources/css/InsertIcon.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1300.0" style="-fx-background-color: #D8D8D8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.admin.mainmenu.MainMenuAdminController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="75.0" prefHeight="615.0" prefWidth="140.0">
+         <children>
+            <ListView fx:id="listView" layoutY="-3.0" onMouseClicked="#listViewAction" prefHeight="621.0" prefWidth="140.0" stylesheets="@../../resources/css/listView.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneView" layoutX="138.0" layoutY="74.0" prefHeight="615.0" prefWidth="1162.0" />
+      <AnchorPane prefHeight="74.0" prefWidth="1300.0" styleClass="header" stylesheets="@../../resources/css/InsertIcon.css">
+         <children>
+            <HBox layoutX="1174.0" layoutY="2.0" prefHeight="25.0" prefWidth="126.0" spacing="1.0" stylesheets="@../../resources/css/winDec.css">
+               <children>
+                  <Button fx:id="fullscreen" mnemonicParsing="false" onAction="#fullscreenAction" prefWidth="30.0" styleClass="decoration-button-fullscreen" />
+                  <Button fx:id="minimize" mnemonicParsing="false" onAction="#minimizeAction" prefWidth="30.0" styleClass="decoration-button-minimize" />
+                  <Button fx:id="maximize" mnemonicParsing="false" onAction="#maximizeAction" prefWidth="30.0" styleClass="decoration-button-maximize" />
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#closeAction" prefWidth="30.0" styleClass="decoration-button-close" />
+               </children>
+            </HBox>
+            <Text layoutX="7.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perpustakaan Project">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

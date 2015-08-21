@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneView" prefHeight="450.0" prefWidth="1320.0" styleClass="pane-sub" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.peminjaman.PeminjamanController">
+   <children>
+      <Separator layoutX="516.0" layoutY="1.0" opacity="0.51" orientation="VERTICAL" prefHeight="450.0" prefWidth="7.0" />
+      <GridPane fx:id="grid1" hgap="5.0" layoutX="70.0" layoutY="71.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="NIS :" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID BUKU :" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Tgl. PINJAM :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Tgl. KEMBALI :" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNIS" prefHeight="30.0" styleClass="radius" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtIDBuku" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="datePinjam" prefHeight="30.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateKembali" prefHeight="30.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="ID :" />
+            <TextField fx:id="txtId" disable="true" editable="false" prefHeight="30.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tablePinjam" layoutX="580.0" layoutY="90.0" prefHeight="215.0" prefWidth="615.0" />
+      <Button fx:id="btUpdate" alignment="BASELINE_RIGHT" layoutX="235.0" layoutY="325.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="35.0" prefWidth="90.0" text="Update" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-update" />
+         </styleClass></Button>
+      <Button fx:id="btAddPinjam" alignment="BASELINE_RIGHT" layoutX="325.0" layoutY="325.0" mnemonicParsing="false" onAction="#AddPinjamAction" prefHeight="35.0" prefWidth="90.0" stylesheets="@../resources/css/InsertIcon.css" text="Tambah" textFill="WHITE">
+         <styleClass>
+            <String fx:value="bt-add" />
+            <String fx:value="radius" />
+         </styleClass></Button>
+      <Button fx:id="btEdit" alignment="BASELINE_RIGHT" layoutX="581.0" layoutY="325.0" mnemonicParsing="false" onAction="#btEditAction" prefHeight="35.0" prefWidth="75.0" stylesheets="@../resources/css/InsertIcon.css" text="Edit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-update" />
+         </styleClass></Button>
+      <Button fx:id="btCekNIS" alignment="BASELINE_RIGHT" layoutX="415.0" layoutY="121.0" mnemonicParsing="false" onAction="#cekNISAction" prefHeight="29.0" prefWidth="30.0" stylesheets="@../resources/css/InsertIcon.css">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-add" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="upIcon" fill="WHITE" glyphName="EDIT" layoutX="247.0" layoutY="348.0" size="15" />
+      <FontAwesomeIconView fx:id="plusIcon" fill="WHITE" glyphName="PLUS" layoutX="334.0" layoutY="348.0" size="15" />
+      <FontAwesomeIconView fx:id="editIcon" fill="WHITE" glyphName="EDIT" layoutX="594.0" layoutY="348.0" size="15" />
+      <FontAwesomeIconView fx:id="iconClose" fill="WHITE" glyphName="CLOSE" layoutX="1289.0" layoutY="32.0" onMouseClicked="#closeAction" size="21" />
+      <Text fx:id="txtHeader" fill="WHITE" layoutX="84.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="eminjaman Form" />
+      <FontAwesomeIconView fx:id="fontHeader" fill="WHITE" glyphName="PAYPAL" layoutX="70.0" layoutY="40.0" size="15" />
+      <FontAwesomeIconView fx:id="searchIcon" fill="WHITE" glyphName="SEARCH" layoutX="424.0" layoutY="140.0" size="13" />
+      <TextField fx:id="txtCari" layoutX="581.0" layoutY="43.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="615.0" promptText="Masukkan keyword pencarian" />
+      <FontAwesomeIconView fx:id="grid2" fill="#837e7e" glyphName="SEARCH" layoutX="1175.0" layoutY="62.0" size="13" />
+      <Button fx:id="btReport" alignment="BASELINE_RIGHT" layoutX="656.0" layoutY="325.0" mnemonicParsing="false" onAction="#reportAction" prefHeight="35.0" prefWidth="85.0" text="Report" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="bt-add" />
+         </styleClass></Button>
+      <FontAwesomeIconView fx:id="reportIcon" fill="WHITE" glyphName="PRINT" layoutX="667.0" layoutY="347.0" size="13" />
+   </children>
+   <stylesheets>
+      <URL value="@../resources/css/InsertIcon.css" />
+      <URL value="@../resources/css/MetroUIGlobal.css" />
+   </stylesheets>
+</AnchorPane>

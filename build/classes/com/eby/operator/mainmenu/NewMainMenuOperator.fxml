@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1320.0" styleClass="header" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eby.operator.mainmenu.NewMainMenuOperatorController">
+   <children>
+      <AnchorPane prefHeight="35.0" prefWidth="1320.0" styleClass="darkTeal">
+         <children>
+            <HBox fx:id="hBox" layoutX="1225.0" layoutY="5.0" prefHeight="25.0" prefWidth="90.0" stylesheets="@../../resources/css/winDec.css">
+               <children>
+                  <Button fx:id="btFullscreen" mnemonicParsing="false" onAction="#fullscreenAction" prefHeight="25.0" prefWidth="30.0" styleClass="decoration-button-fullscreen" />
+                  <Button fx:id="btMaximize" mnemonicParsing="false" onAction="#maximizeAction" prefWidth="30.0" styleClass="decoration-button-maximize" />
+                  <Button fx:id="btClose" mnemonicParsing="false" onAction="#closeAction" prefWidth="30.0" styleClass="decoration-button-close" />
+               </children>
+            </HBox>
+            <Text fx:id="txtHeader" fill="WHITE" layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Welcome to my first project" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneView" layoutY="320.0" prefHeight="410.0" prefWidth="1320.0" />
+      <Button fx:id="btBukuMenu" alignment="BOTTOM_LEFT" layoutX="38.0" layoutY="140.0" mnemonicParsing="false" onAction="#bukuMenuAction" prefHeight="148.0" prefWidth="240.0" text="Buku" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btAnggotaMenu" alignment="BOTTOM_LEFT" layoutX="287.0" layoutY="140.0" mnemonicParsing="false" onAction="#anggotaMenuAction" prefHeight="148.0" prefWidth="240.0" text="Anggota" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btAdminMenu" alignment="BOTTOM_LEFT" disable="true" layoutX="537.0" layoutY="140.0" mnemonicParsing="false" onAction="#AdminMenuAction" prefHeight="148.0" prefWidth="240.0" text="User/Admin" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightBlue" />
+            <String fx:value="segoe-font-menu" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btPeminjaman" alignment="BOTTOM_LEFT" layoutX="787.0" layoutY="140.0" mnemonicParsing="false" onAction="#peminjamanAction" prefHeight="148.0" prefWidth="240.0" text="Peminjaman" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightPurple" />
+            <String fx:value="segoe-font" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btPengembalian" alignment="BOTTOM_LEFT" layoutX="1037.0" layoutY="141.0" mnemonicParsing="false" onAction="#pengembalianAction" prefHeight="148.0" prefWidth="240.0" text="Pengembalian" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="lightRed" />
+            <String fx:value="segoe-font" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="bukuIcon" fill="WHITE" glyphName="BOOK" layoutX="126.0" layoutY="238.0" size="68" />
+      <FontAwesomeIconView fx:id="anggotaIcon" fill="WHITE" glyphName="USERS" layoutX="371.0" layoutY="239.0" size="68" text="" />
+      <FontAwesomeIconView fx:id="adminIcon" fill="#9a6d6d" glyphName="USER" layoutX="629.0" layoutY="239.0" size="68" text="" />
+      <FontAwesomeIconView fx:id="peminjamanIcon" fill="WHITE" glyphName="PAYPAL" layoutX="873.0" layoutY="239.0" size="68" />
+      <FontAwesomeIconView fx:id="pengembalianIcon" fill="WHITE" glyphName="STACK_OVERFLOW" layoutX="1130.0" layoutY="236.0" size="68" />
+      <Text fx:id="txtMenuHeader" fill="WHITE" layoutX="38.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Main Menu" />
+      <Text fx:id="txtDisable" fill="WHITE" layoutX="602.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fitur untuk admin">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Button fx:id="btLogOut" alignment="BOTTOM_CENTER" layoutX="1212.0" layoutY="35.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="56.0" prefWidth="65.0" text="Logout" textFill="WHITE">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="header" />
+            <String fx:value="logOut" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="logOutIcon" fill="WHITE" glyphName="POWER_OFF" layoutX="1236.0" layoutY="64.0" size="21" />
+      <FontAwesomeIconView fill="#d02525" glyphName="BAN" layoutX="633.0" layoutY="234.0" size="55" />
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/css/MetroUIGlobal.css" />
+      <URL value="@../../resources/css/InsertIcon.css" />
+   </stylesheets>
+</AnchorPane>
