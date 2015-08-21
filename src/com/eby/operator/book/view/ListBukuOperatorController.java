@@ -63,7 +63,7 @@ public class ListBukuOperatorController implements Initializable, ControlledScre
 
     @FXML
     private void backAction(ActionEvent event) {
-        screensController.setScreen(Main.mainMenuOperator);
+        screensController.setScreen(Main.menuBukuOpID);
     }
 
     @FXML

@@ -153,7 +153,7 @@ public class RegisterForAdminController implements Initializable, ControlledScre
             } else {
                 validdator = EmailValidator.getInstance();
                 if (validdator.isValid(email)) {
-                    if (pass.toCharArray().length < 8) {
+                    if (pass.toCharArray().length < 6) {
                         con.dialog(Alert.AlertType.WARNING, "Password tidak memenuhi!", null);
                     } else {
                         user.setNama(nama);

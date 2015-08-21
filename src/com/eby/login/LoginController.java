@@ -26,6 +26,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
@@ -65,6 +67,8 @@ public class LoginController implements Initializable, ControlledScreen {
     Stage stage;
     Config config;
     ScreensController screenController;
+    @FXML
+    private Label lblWrong;
 
     /**
      * Initializes the controller class.
@@ -83,10 +87,11 @@ public class LoginController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    private void LoginAction(ActionEvent event) {
+    private void LoginAction(ActionEvent event) throws InterruptedException {
         if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
-            config.dialog(Alert.AlertType.WARNING, "Masukkan Username dan Password", null);
+            lblWrong.setText("Masukkan Username dan Password");
         } else {
+            Thread.sleep(2000);
             this.login();
         }
 
@@ -106,7 +111,8 @@ public class LoginController implements Initializable, ControlledScreen {
             if (rs.next()) {
                 rs.getString("username");
                 rs.getString("passwd");
-                config.dialog(Alert.AlertType.INFORMATION, "Login sebagai " + user + " Berhasil !!!", null);
+//                config.dialog(Alert.AlertType.INFORMATION, "Login sebagai " + user + " Berhasil !!!", null);
+                lblWrong.setText("Login Succes !");
                 reset();
                 if (rs.getString("level").equalsIgnoreCase("admin")) {
                     screenController.setScreen(Main.MenuUtamaAdminID);
@@ -114,7 +120,8 @@ public class LoginController implements Initializable, ControlledScreen {
                     screenController.setScreen(Main.menuUtamaOperatorID);
                 }
             } else {
-                config.dialog(Alert.AlertType.WARNING, "username or password salah !!!", null);
+//                config.dialog(Alert.AlertType.WARNING, "username or password salah !!!", null);
+                lblWrong.setText("Username atau password salah !");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -186,6 +193,22 @@ public class LoginController implements Initializable, ControlledScreen {
         new FadeInLeftTransition(loginHeader).play();
         new FadeInLeftTransition(hBox).play();
         new FadeInLeftTransition(btLogin).play();
+    }
+
+    public void set() {
+        lblWrong.setText("");
+    }
+
+    @FXML
+    private void keyPressedAction(KeyEvent event) throws InterruptedException {
+        if (event.getCode() == KeyCode.ENTER) {
+            if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
+                lblWrong.setText("Masukkan Username dan Password");
+            } else {
+                Thread.sleep(2000);
+                this.login();
+            }
+        }
     }
 
 }

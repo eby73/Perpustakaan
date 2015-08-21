@@ -96,7 +96,7 @@
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="328.0" layoutY="499.0" size="15" />
       <Text layoutX="651.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="segoe-font" text="Form Update Anggota" />
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="892.0" layoutY="466.0" size="15" />
-      <Text fx:id="txtNotif" layoutX="414.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password harus 8 karakter atau lebih" wrappingWidth="132.404296875" />
+      <Text fx:id="txtNotif" layoutX="414.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password harus 6 karakter atau lebih" wrappingWidth="132.404296875" />
    </children>
    <stylesheets>
       <URL value="@../../../resources/css/InsertIcon.css" />

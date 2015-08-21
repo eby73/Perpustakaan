@@ -163,7 +163,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
         } else {
             validator = EmailValidator.getInstance();
             if (validator.isValid(email)) {
-                if (pass.toCharArray().length < 8) {
+                if (pass.toCharArray().length < 6) {
                     con.dialog(Alert.AlertType.WARNING, "Password tidak memenuhi", null);
                 } else {
                     user.setId(Integer.valueOf(id));
@@ -239,7 +239,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
         if (pass.equals("")) {
             txtNotif.setVisible(false);
         } else {
-            if (pass.toCharArray().length < 8) {
+            if (pass.toCharArray().length < 6) {
                 txtNotif.setVisible(true);
             } else {
                 txtNotif.setVisible(false);

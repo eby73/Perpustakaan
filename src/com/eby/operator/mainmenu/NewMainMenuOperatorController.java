@@ -7,6 +7,7 @@ package com.eby.operator.mainmenu;
 
 import com.eby.animations.FadeInLeftTransition;
 import com.eby.frameworkConfig.Config;
+import com.eby.helper.ControllerHelper;
 import com.eby.main.ControlledScreen;
 import com.eby.main.Main;
 import com.eby.main.ScreensController;
@@ -69,8 +70,8 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
     private Button btClose;
     @FXML
     private Text txtDisable;
-    
-    double w,h;
+
+    double w, h;
     Rectangle2D rec2;
     private ScreensController screensController;
     private Config con;
@@ -79,7 +80,6 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
     private Button btLogOut;
     @FXML
     private FontAwesomeIconView logOutIcon;
-    
 
     /**
      * Initializes the controller class.
@@ -146,7 +146,7 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
 
     @FXML
     private void peminjamanAction(ActionEvent event) {
-         con.loadAnchorPane(paneView, "/peminjaman/Peminjaman.fxml");
+        con.loadAnchorPane(paneView, "/peminjaman/Peminjaman.fxml");
     }
 
     @FXML
@@ -185,6 +185,7 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
 
     @FXML
     private void logOutAction(ActionEvent event) {
-         screensController.setScreen(Main.loginID);
+        screensController.setScreen(Main.loginID);
+        ControllerHelper.getLoginController(screensController).set();
     }
 }

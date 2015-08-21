@@ -42,7 +42,7 @@
             <String fx:value="bt-add" />
             <String fx:value="radius" />
          </styleClass></Button>
-      <Button fx:id="btDelete" alignment="BASELINE_RIGHT" layoutX="568.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="90.0" text="DELETE" textFill="WHITE">
+      <Button fx:id="btDelete" alignment="BASELINE_RIGHT" layoutX="568.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="85.0" text="Delete" textFill="WHITE">
          <styleClass>
             <String fx:value="bt-delete" />
             <String fx:value="radius" />

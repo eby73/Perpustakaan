@@ -5,11 +5,8 @@
  */
 package com.eby.book.category;
 
-import com.eby.book.category.CategoryController;
 import com.eby.orm.dao.GenericDAO;
-import com.eby.orm.entity.Anggota;
 import com.eby.orm.entity.Category;
-import com.eby.sql.dao.CategoryDao;
 import java.util.List;
 
 /**

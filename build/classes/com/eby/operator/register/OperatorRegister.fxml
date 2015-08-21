@@ -35,8 +35,8 @@
       </GridPane>
       <Button fx:id="btReg" alignment="BASELINE_RIGHT" layoutX="312.0" layoutY="361.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="35.0" prefWidth="95.0" text="Register" textFill="WHITE">
          <styleClass>
-            <String fx:value="border-style" />
-            <String fx:value="darkBlue" />
+            <String fx:value="radius" />
+            <String fx:value="bt-add" />
          </styleClass></Button>
       <FontAwesomeIconView fx:id="closeIcon" fill="WHITE" glyphName="CLOSE" layoutX="1289.0" layoutY="32.0" onMouseClicked="#closeAction" size="21" />
       <FontAwesomeIconView fx:id="userPlusIcon" fill="WHITE" glyphName="USER_PLUS" layoutX="322.0" layoutY="382.0" size="13" />

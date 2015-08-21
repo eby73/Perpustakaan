@@ -8,6 +8,7 @@ package com.eby.admin.mainmenu;
 import com.eby.animations.FadeInLeftTransition;
 import com.eby.animations.FadeOutLeftTransition;
 import com.eby.frameworkConfig.Config;
+import com.eby.helper.ControllerHelper;
 import com.eby.main.ControlledScreen;
 import com.eby.main.Main;
 import com.eby.main.ScreensController;
@@ -26,7 +27,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -202,6 +202,7 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     @FXML
     private void logOutAction(ActionEvent event) {
         screensController.setScreen(Main.loginID);
+        ControllerHelper.getLoginController(screensController).set();
     }
 
     @FXML

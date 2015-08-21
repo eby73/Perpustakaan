@@ -16,6 +16,7 @@ import com.eby.main.ScreensController;
 import com.eby.main.Main;
 import com.eby.admin.mainmenu.MainMenuAdminController;
 import com.eby.admin.mainmenu.NewMainMenuAdminController;
+import com.eby.login.LoginController;
 import com.eby.operator.anggota.edit.AnggotaOpEditController;
 import com.eby.operator.anggota.view.ListAnggotaOperatorController;
 import com.eby.operator.book.edit.BukuEditOperatorController;
@@ -76,6 +77,10 @@ public class ControllerHelper {
 
     public static ListAnggotaOperatorController getListAnggotaOp(ScreensController screenController) {
         return (ListAnggotaOperatorController) screenController.getControllerScreen(Main.listAnggotaOpID);
+    }
+
+    public static LoginController getLoginController(ScreensController screensController) {
+        return (LoginController) screensController.getControllerScreen(Main.loginID);
     }
 
 }

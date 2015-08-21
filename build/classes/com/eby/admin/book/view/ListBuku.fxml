@@ -35,7 +35,7 @@
          </styleClass></Button>
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="80.0" layoutY="586.0" size="15" />
       <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="154.0" layoutY="585.0" size="15" />
-      <TextField fx:id="txtCari" layoutX="66.0" layoutY="107.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan nama" />
+      <TextField fx:id="txtCari" layoutX="66.0" layoutY="107.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan judul" />
       <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="448.0" layoutY="126.0" size="13" />
       <FontAwesomeIconView fill="#838383" glyphName="SEARCH" layoutX="448.0" layoutY="126.0" size="13" />
    </children>

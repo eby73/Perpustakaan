@@ -65,41 +65,41 @@ public class ListBukuOperatorTableModel {
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn2(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setPrefWidth(140);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn3(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setPrefWidth(100);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn4(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setPrefWidth(100);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn5(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setPrefWidth(230);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }
-
+    
     private TableColumn addTableColumn6(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
         t.setPrefWidth(150);
@@ -135,7 +135,7 @@ public class ListBukuOperatorTableModel {
          return t;
         
     }
-
+    
     private TableColumn getPenerbit() {
         TableColumn t = this.addTableColumn("PENERBIT", "penerbit");
         t.setPrefWidth(150);
@@ -149,9 +149,10 @@ public class ListBukuOperatorTableModel {
                     protected void updateItem(Penerbit pen, boolean empty) {
                         if (pen != null) {
                             Label label = new Label(pen.getNama());
-                            Button btn = new Button(pen.getNama());
                             setGraphic(label);
                             
+                        } else {
+                            setGraphic(null);
                         }
                     }
                 };
@@ -177,7 +178,7 @@ public class ListBukuOperatorTableModel {
         this.removeAllColumn();
         this.initColumn();
     }
-
+    
     public void removeAllElement() {
         int size = list.size();
         for (int i = 0; i < size; i++) {

@@ -61,11 +61,9 @@ public class Report {
 
         try {
             report.show(false);
-            report.toDocx(new FileOutputStream("/home/eby/Report.docx"));
+//            report.toDocx(new FileOutputStream("/home/eby/Report.docx"));
             report.toString();
         } catch (DRException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

@@ -6,12 +6,8 @@
 package com.eby.peminjaman;
 
 import com.eby.orm.dao.GenericDAO;
-import com.eby.orm.entity.Anggota;
-import com.eby.peminjaman.PeminjamanController;
 import com.eby.orm.entity.Peminjaman;
-import com.eby.sql.dao.PengembalianDAO;
 import java.util.List;
-import javax.print.DocFlavor;
 
 /**
  *

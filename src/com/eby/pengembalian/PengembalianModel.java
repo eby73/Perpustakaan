@@ -5,7 +5,8 @@
  */
 package com.eby.pengembalian;
 
-import com.eby.pengembalian.PengembalianController;
+import com.eby.orm.dao.GenericDAO;
+import com.eby.orm.entity.Peminjaman;
 import com.eby.sql.dao.PengembalianDAO;
 
 /**
@@ -13,9 +14,10 @@ import com.eby.sql.dao.PengembalianDAO;
  * @author eby
  */
 public class PengembalianModel {
-    
+
     private PengembalianController controller;
     private PengembalianDAO sqlDao;
+    private GenericDAO dao;
 
     public PengembalianModel() {
         sqlDao = new PengembalianDAO();
@@ -28,9 +30,13 @@ public class PengembalianModel {
     public void setController(PengembalianController controller) {
         this.controller = controller;
     }
-    
-    public void kembalikan(int id){
+
+    public void kembalikan(int id) {
         sqlDao.kembalikan(id);
     }
-    
+
+    public void kembali(Peminjaman p) {
+        dao.delete(p);
+    }
+
 }

@@ -57,8 +57,8 @@
       </GridPane>
       <Button fx:id="btUpdate" alignment="BASELINE_RIGHT" layoutX="341.0" layoutY="433.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="35.0" prefWidth="90.0" text="Update" textFill="WHITE">
          <styleClass>
-            <String fx:value="darkOrange" />
-            <String fx:value="border-style" />
+            <String fx:value="bt-update" />
+            <String fx:value="radius" />
          </styleClass></Button>
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="353.0" layoutY="455.0" size="13" />
    </children>
