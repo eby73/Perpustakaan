@@ -82,7 +82,7 @@ public class ListBukuOperatorTableModel {
     
     private TableColumn addTableColumn4(String tableHeader, String entityAttribute) {
         TableColumn t = new TableColumn(tableHeader);
-        t.setPrefWidth(100);
+        t.setPrefWidth(130);
         t.setCellValueFactory(new PropertyValueFactory<Buku, String>(entityAttribute));
         return t;
     }

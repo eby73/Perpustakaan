@@ -61,6 +61,12 @@ public class PengembalianController implements Initializable {
     private AnchorPane paneParent;
     @FXML
     private Text txtHari;
+    @FXML
+    private Button btRefresh;
+    @FXML
+    private FontAwesomeIconView kembaliIcon;
+    @FXML
+    private FontAwesomeIconView refreshIcon;
 
     /**
      * Initializes the controller class.
@@ -164,8 +170,8 @@ public class PengembalianController implements Initializable {
     private void closeAction(MouseEvent event) {
         fadeOut();
     }
-    
-    private void fadeIn(){
+
+    private void fadeIn() {
         new FadeInLeftTransition(grid).play();
         new FadeInLeftTransition(txtHeader).play();
         new FadeInLeftTransition(closeIcon).play();
@@ -173,9 +179,12 @@ public class PengembalianController implements Initializable {
         new FadeInLeftTransition(btKembaliBuku).play();
         new FadeInLeftTransition(cariIcon).play();
         new FadeInLeftTransition(txtHari).play();
+        new FadeInLeftTransition(btRefresh).play();
+        new FadeInLeftTransition(refreshIcon).play();
+        new FadeInLeftTransition(kembaliIcon).play();
     }
-    
-    private void fadeOut(){
+
+    private void fadeOut() {
         new FadeOutRightTransition(grid).play();
         new FadeOutRightTransition(txtHeader).play();
         new FadeOutRightTransition(closeIcon).play();
@@ -184,8 +193,18 @@ public class PengembalianController implements Initializable {
         new FadeOutRightTransition(cariIcon).play();
         new FadeOutRightTransition(txtHari).play();
         new FadeOutRightTransition(paneParent).play();
+        new FadeOutRightTransition(btRefresh).play();
+        new FadeOutRightTransition(refreshIcon).play();
+        new FadeOutRightTransition(kembaliIcon).play();
     }
-    
-    
+
+    @FXML
+    private void refreshAction(ActionEvent event) {
+        txtNIS.setText("");
+        txtIdBuku.setText("");
+        txtIdPinjam.setText("");
+        txtLamaPinjam.setText("");
+        txtDenda.setText("");
+    }
 
 }
