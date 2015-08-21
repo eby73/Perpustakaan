@@ -38,7 +38,7 @@
             <String fx:value="radius" />
             <String fx:value="bt-delete" />
          </styleClass></Button>
-      <TextField fx:id="txtCari" layoutX="64.0" layoutY="108.0" onKeyTyped="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan judul" />
+      <TextField fx:id="txtCari" layoutX="64.0" layoutY="108.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan judul" />
       <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="446.0" layoutY="127.0" size="13" />
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="79.0" layoutY="586.0" size="13" />
       <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="148.0" layoutY="585.0" size="13" />

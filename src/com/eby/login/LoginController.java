@@ -21,7 +21,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -58,6 +57,8 @@ public class LoginController implements Initializable, ControlledScreen {
     private Button btMaximize;
     @FXML
     private Text txtHeader;
+    @FXML
+    private Label lblWrong;
     private FontAwesomeIconView userIcon;
     private FontAwesomeIconView passIcon;
     double w, h;
@@ -67,8 +68,6 @@ public class LoginController implements Initializable, ControlledScreen {
     Stage stage;
     Config config;
     ScreensController screenController;
-    @FXML
-    private Label lblWrong;
 
     /**
      * Initializes the controller class.
@@ -91,7 +90,7 @@ public class LoginController implements Initializable, ControlledScreen {
         if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
             lblWrong.setText("Masukkan Username dan Password");
         } else {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             this.login();
         }
 
@@ -101,7 +100,8 @@ public class LoginController implements Initializable, ControlledScreen {
 
         String user = txtUser.getText();
         String pass = txtPass.getText();
-
+        
+        //Mendapatkan nilai user pass dan level pada database
         MySQLQuery query = new MySQLQuery();
         String sql = "select username, passwd, level"
                 + " from user where username = '" + user + "'"
@@ -205,7 +205,7 @@ public class LoginController implements Initializable, ControlledScreen {
             if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
                 lblWrong.setText("Masukkan Username dan Password");
             } else {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
                 this.login();
             }
         }

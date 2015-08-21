@@ -41,7 +41,7 @@
       </Button>
       <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="78.0" layoutY="586.0" size="13" />
       <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="152.0" layoutY="585.0" size="13" />
-      <TextField fx:id="txtCari" layoutX="59.0" layoutY="104.0" onKeyTyped="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan nama" />
+      <TextField fx:id="txtCari" layoutX="59.0" layoutY="104.0" onKeyReleased="#cariAction" prefHeight="30.0" prefWidth="400.0" promptText="Pencarian dengan nama" />
       <FontAwesomeIconView fill="#837272" glyphName="SEARCH" layoutX="441.0" layoutY="123.0" size="13" />
    </children>
    <stylesheets>
