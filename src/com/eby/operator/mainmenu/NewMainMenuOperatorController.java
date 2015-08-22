@@ -6,6 +6,7 @@
 package com.eby.operator.mainmenu;
 
 import com.eby.animations.FadeInLeftTransition;
+import com.eby.animations.FadeOutLeftTransition;
 import com.eby.frameworkConfig.Config;
 import com.eby.helper.ControllerHelper;
 import com.eby.main.ControlledScreen;
@@ -20,12 +21,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -80,6 +81,18 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
     private Button btLogOut;
     @FXML
     private FontAwesomeIconView logOutIcon;
+    @FXML
+    private Button btFacebook;
+    @FXML
+    private Button btGithub;
+    @FXML
+    private FontAwesomeIconView fIcon;
+    @FXML
+    private FontAwesomeIconView gIcon;
+    @FXML
+    private FontAwesomeIconView btShow;
+    @FXML
+    private FontAwesomeIconView btHide;
 
     /**
      * Initializes the controller class.
@@ -91,6 +104,7 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
         rec2 = Screen.getPrimary().getVisualBounds();
         w = 0.1;
         h = 0.1;
+        btShow.setVisible(false);
     }
 
     @FXML
@@ -187,5 +201,64 @@ public class NewMainMenuOperatorController implements Initializable, ControlledS
     private void logOutAction(ActionEvent event) {
         screensController.setScreen(Main.loginID);
         ControllerHelper.getLoginController(screensController).set();
+    }
+
+    @FXML
+    private void facebookAction(ActionEvent event) {
+        this.browse("https://www.facebook.com/eby.j.barcelonista.bee.vhaa");
+    }
+
+    @FXML
+    private void githubAction(ActionEvent event) {
+        this.browse("https://github.com/eby73");
+    }
+
+    @FXML
+    private void showAction(MouseEvent event) {
+        new FadeInLeftTransition(btFacebook).play();
+        new FadeInLeftTransition(fIcon).play();
+        new FadeInLeftTransition(gIcon).play();
+        new FadeInLeftTransition(btGithub).play();
+        new FadeInLeftTransition(btHide).play();
+        new FadeOutLeftTransition(btShow).play();
+    }
+
+    @FXML
+    private void hideAction(MouseEvent event) {
+        new FadeOutLeftTransition(btFacebook).play();
+        new FadeOutLeftTransition(fIcon).play();
+        new FadeOutLeftTransition(gIcon).play();
+        new FadeOutLeftTransition(btGithub).play();
+        new FadeOutLeftTransition(btHide).play();
+        btShow.setVisible(true);
+        new FadeInLeftTransition(btShow).play();
+    }
+
+    public void browse(String url) {
+        //source dari mkyoung.com
+        String os = System.getProperty("os.name").toLowerCase();
+        Runtime rt = Runtime.getRuntime();
+
+        try {
+
+            if (os.indexOf("win") >= 0) {
+                rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+            } else if (os.indexOf("mac") >= 0) {
+                rt.exec("open " + url);
+            } else if (os.indexOf("nix") >= 0 || os.indexOf("nux") >= 0) {
+                String[] browsers = {"chromium-browser", "chrome", "chromium", "google chrome", "firefox", "mozilla", "konqueror",
+                    "netscape", "opera", "links", "lynx"};
+                StringBuffer cmd = new StringBuffer();
+                for (int i = 0; i < browsers.length; i++) {
+                    cmd.append((i == 0 ? "" : " || ") + browsers[i] + " \"" + url + "\" ");
+                }
+                rt.exec(new String[]{"sh", "-c", cmd.toString()});
+            } else {
+                return;
+            }
+        } catch (Exception e) {
+            return;
+        }
+        return;
     }
 }

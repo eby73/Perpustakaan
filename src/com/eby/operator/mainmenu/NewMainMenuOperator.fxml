@@ -24,47 +24,47 @@
          </children>
       </AnchorPane>
       <AnchorPane fx:id="paneView" layoutY="320.0" prefHeight="410.0" prefWidth="1320.0" />
-      <Button fx:id="btBukuMenu" alignment="BOTTOM_LEFT" layoutX="38.0" layoutY="140.0" mnemonicParsing="false" onAction="#bukuMenuAction" prefHeight="148.0" prefWidth="240.0" text="Buku" textFill="WHITE">
+      <Button fx:id="btBukuMenu" alignment="BOTTOM_LEFT" layoutX="38.0" layoutY="144.0" mnemonicParsing="false" onAction="#bukuMenuAction" prefHeight="148.0" prefWidth="240.0" text="Buku" textFill="WHITE">
          <styleClass>
             <String fx:value="radius" />
             <String fx:value="lightBlue" />
             <String fx:value="segoe-font-menu" />
          </styleClass>
       </Button>
-      <Button fx:id="btAnggotaMenu" alignment="BOTTOM_LEFT" layoutX="287.0" layoutY="140.0" mnemonicParsing="false" onAction="#anggotaMenuAction" prefHeight="148.0" prefWidth="240.0" text="Anggota" textFill="WHITE">
+      <Button fx:id="btAnggotaMenu" alignment="BOTTOM_LEFT" layoutX="287.0" layoutY="144.0" mnemonicParsing="false" onAction="#anggotaMenuAction" prefHeight="148.0" prefWidth="240.0" text="Anggota" textFill="WHITE">
          <styleClass>
             <String fx:value="radius" />
             <String fx:value="lightBlue" />
             <String fx:value="segoe-font-menu" />
          </styleClass>
       </Button>
-      <Button fx:id="btAdminMenu" alignment="BOTTOM_LEFT" disable="true" layoutX="537.0" layoutY="140.0" mnemonicParsing="false" onAction="#AdminMenuAction" prefHeight="148.0" prefWidth="240.0" text="User/Admin" textFill="WHITE">
+      <Button fx:id="btAdminMenu" alignment="BOTTOM_LEFT" disable="true" layoutX="537.0" layoutY="144.0" mnemonicParsing="false" onAction="#AdminMenuAction" prefHeight="148.0" prefWidth="240.0" text="User/Admin" textFill="WHITE">
          <styleClass>
             <String fx:value="radius" />
             <String fx:value="lightBlue" />
             <String fx:value="segoe-font-menu" />
          </styleClass>
       </Button>
-      <Button fx:id="btPeminjaman" alignment="BOTTOM_LEFT" layoutX="787.0" layoutY="140.0" mnemonicParsing="false" onAction="#peminjamanAction" prefHeight="148.0" prefWidth="240.0" text="Peminjaman" textFill="WHITE">
+      <Button fx:id="btPeminjaman" alignment="BOTTOM_LEFT" layoutX="787.0" layoutY="144.0" mnemonicParsing="false" onAction="#peminjamanAction" prefHeight="148.0" prefWidth="240.0" text="Peminjaman" textFill="WHITE">
          <styleClass>
             <String fx:value="radius" />
             <String fx:value="lightPurple" />
             <String fx:value="segoe-font" />
          </styleClass>
       </Button>
-      <Button fx:id="btPengembalian" alignment="BOTTOM_LEFT" layoutX="1037.0" layoutY="141.0" mnemonicParsing="false" onAction="#pengembalianAction" prefHeight="148.0" prefWidth="240.0" text="Pengembalian" textFill="WHITE">
+      <Button fx:id="btPengembalian" alignment="BOTTOM_LEFT" layoutX="1037.0" layoutY="145.0" mnemonicParsing="false" onAction="#pengembalianAction" prefHeight="148.0" prefWidth="240.0" text="Pengembalian" textFill="WHITE">
          <styleClass>
             <String fx:value="radius" />
             <String fx:value="lightRed" />
             <String fx:value="segoe-font" />
          </styleClass>
       </Button>
-      <FontAwesomeIconView fx:id="bukuIcon" fill="WHITE" glyphName="BOOK" layoutX="126.0" layoutY="238.0" size="68" />
-      <FontAwesomeIconView fx:id="anggotaIcon" fill="WHITE" glyphName="USERS" layoutX="371.0" layoutY="239.0" size="68" text="" />
-      <FontAwesomeIconView fx:id="adminIcon" fill="#9a6d6d" glyphName="USER" layoutX="629.0" layoutY="239.0" size="68" text="" />
-      <FontAwesomeIconView fx:id="peminjamanIcon" fill="WHITE" glyphName="PAYPAL" layoutX="873.0" layoutY="239.0" size="68" />
-      <FontAwesomeIconView fx:id="pengembalianIcon" fill="WHITE" glyphName="STACK_OVERFLOW" layoutX="1130.0" layoutY="236.0" size="68" />
-      <Text fx:id="txtMenuHeader" fill="WHITE" layoutX="38.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Main Menu" />
+      <FontAwesomeIconView fx:id="bukuIcon" fill="WHITE" glyphName="BOOK" layoutX="126.0" layoutY="242.0" size="68" />
+      <FontAwesomeIconView fx:id="anggotaIcon" fill="WHITE" glyphName="USERS" layoutX="371.0" layoutY="243.0" size="68" text="" />
+      <FontAwesomeIconView fx:id="adminIcon" fill="#9a6d6d" glyphName="USER" layoutX="629.0" layoutY="243.0" size="68" text="" />
+      <FontAwesomeIconView fx:id="peminjamanIcon" fill="WHITE" glyphName="PAYPAL" layoutX="873.0" layoutY="243.0" size="68" />
+      <FontAwesomeIconView fx:id="pengembalianIcon" fill="WHITE" glyphName="STACK_OVERFLOW" layoutX="1130.0" layoutY="240.0" size="68" />
+      <Text fx:id="txtMenuHeader" fill="WHITE" layoutX="38.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-welcome" text="Main Menu" />
       <Text fx:id="txtDisable" layoutX="607.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fitur Disabled">
          <font>
             <Font size="14.0" />
@@ -77,6 +77,22 @@
          </styleClass>
       </Button>
       <FontAwesomeIconView fx:id="logOutIcon" fill="WHITE" glyphName="POWER_OFF" layoutX="1236.0" layoutY="64.0" size="21" />
+      <Button fx:id="btFacebook" layoutY="37.0" mnemonicParsing="false" onAction="#facebookAction" prefHeight="30.0" prefWidth="30.0">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="facebook-color" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btGithub" layoutY="67.0" mnemonicParsing="false" onAction="#githubAction" prefHeight="30.0" prefWidth="30.0">
+         <styleClass>
+            <String fx:value="radius" />
+            <String fx:value="github-color" />
+         </styleClass>
+      </Button>
+      <FontAwesomeIconView fx:id="fIcon" fill="WHITE" glyphName="FACEBOOK" layoutX="11.0" layoutY="56.0" size="13" />
+      <FontAwesomeIconView fx:id="gIcon" fill="WHITE" glyphName="GITHUB" layoutX="8.0" layoutY="86.0" size="13" />
+      <FontAwesomeIconView fx:id="btShow" fill="WHITE" glyphName="CHEVRON_CIRCLE_RIGHT" layoutY="108.0" onMouseClicked="#showAction" size="13" />
+      <FontAwesomeIconView fx:id="btHide" fill="WHITE" glyphName="CHEVRON_CIRCLE_LEFT" layoutX="29.0" layoutY="108.0" onMouseClicked="#hideAction" size="13" />
    </children>
    <stylesheets>
       <URL value="@../../resources/css/MetroUIGlobal.css" />

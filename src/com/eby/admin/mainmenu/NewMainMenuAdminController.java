@@ -248,7 +248,7 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
             } else if (os.indexOf("mac") >= 0) {
                 rt.exec("open " + url);
             } else if (os.indexOf("nix") >= 0 || os.indexOf("nux") >= 0) {
-                String[] browsers = {"epiphany", "chrome", "chromium", "google chrome", "firefox", "mozilla", "konqueror",
+                String[] browsers = {"chromium-browser", "chrome", "chromium", "google chrome", "firefox", "mozilla", "konqueror",
                     "netscape", "opera", "links", "lynx"};
                 StringBuffer cmd = new StringBuffer();
                 for (int i = 0; i < browsers.length; i++) {

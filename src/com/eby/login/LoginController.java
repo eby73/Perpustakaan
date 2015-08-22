@@ -11,6 +11,7 @@ import com.eby.main.ControlledScreen;
 import com.eby.main.ScreensController;
 import com.eby.main.Main;
 import com.eby.sql.connector.MySQLQuery;
+import com.mytdev.javafx.scene.control.AutoCompleteTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -100,7 +101,7 @@ public class LoginController implements Initializable, ControlledScreen {
 
         String user = txtUser.getText();
         String pass = txtPass.getText();
-        
+
         //Mendapatkan nilai user pass dan level pada database
         MySQLQuery query = new MySQLQuery();
         String sql = "select username, passwd, level"
