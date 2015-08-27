@@ -47,20 +47,12 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     private Button btPeminjaman;
     @FXML
     private Button btPengembalian;
-
     @FXML
     private Button brFullScreen;
-    private Button btMinimize;
     @FXML
     private Button btMaximize;
     @FXML
     private Button btClose;
-
-    private Config con;
-    private Stage stage;
-    Double w, h;
-    Rectangle2D rec2;
-    private ScreensController screensController;
     @FXML
     private FontAwesomeIconView bukuIcon;
     @FXML
@@ -81,7 +73,6 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     private Button btLogOut;
     @FXML
     private FontAwesomeIconView logOutIcon;
-    private AnchorPane paneFollow;
     @FXML
     private FontAwesomeIconView showIcon;
     @FXML
@@ -94,6 +85,12 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     private FontAwesomeIconView fIcon;
     @FXML
     private FontAwesomeIconView gIcon;
+    
+    private Config con;
+    private Stage stage;
+    private double w, h;
+    private Rectangle2D rec2;
+    private ScreensController screensController;
 
     /**
      * Initializes the controller class.
@@ -127,12 +124,13 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
 
     @FXML
     private void peminjamanAction(ActionEvent event) {
+        //load peminjaman.fxml ke paneSubMenu
         con.loadAnchorPane(paneSubMenu, "/peminjaman/Peminjaman.fxml");
     }
 
     @FXML
     private void pengembalianAction(ActionEvent event) {
-//        paneSubMenu.getChildren().clear();
+        //load pengembalian.fxml ke paneSubMenu
         con.loadAnchorPane(paneSubMenu, "/pengembalian/Pengembalian.fxml");
     }
 
@@ -140,26 +138,10 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     private void fullScreenAction(ActionEvent event) {
         stage = (Stage) brFullScreen.getScene().getWindow();
         if (stage.isFullScreen()) {
+            //jika stage sudah fullScreen, maka fullScreen(false)
             stage.setFullScreen(false);
         } else {
             stage.setFullScreen(true);
-        }
-    }
-
-    private void minimizeAction(ActionEvent event) {
-        stage = (Stage) btMinimize.getScene().getWindow();
-        if (stage.isMaximized()) {
-            w = rec2.getWidth();
-            h = rec2.getHeight();
-            stage.setMaximized(false);
-            stage.setHeight(h);
-            stage.setWidth(w);
-            stage.centerOnScreen();
-            Platform.runLater(() -> {
-                stage.setIconified(true);
-            });
-        } else {
-            stage.setIconified(true);
         }
     }
 
@@ -171,7 +153,9 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
                 stage.setMaximized(false);
                 stage.setHeight(720);
                 stage.setWidth(1320);
+                //setScreen berada di tengah2 layar
                 stage.centerOnScreen();
+                //mengganti css ketika sudah maximized
                 btMaximize.getStyleClass().remove("decoration-button-restore");
 
             } else {
@@ -202,11 +186,13 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     @FXML
     private void logOutAction(ActionEvent event) {
         screensController.setScreen(Main.loginID);
+        //Mengaktifkan LoginController untuk eksekusi methode set()
         ControllerHelper.getLoginController(screensController).set();
     }
 
     @FXML
     private void hideFollow(MouseEvent event) {
+        //Animasi keluar ke sisi kiri
         new FadeOutLeftTransition(btFacebook).play();
         new FadeOutLeftTransition(fIcon).play();
         new FadeOutLeftTransition(gIcon).play();
@@ -218,16 +204,19 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
 
     @FXML
     private void githubAction(ActionEvent event) {
+        //follow me ^_^
         this.browse("https://github.com/eby73");
     }
 
     @FXML
     private void facebookAction(ActionEvent event) {
+        //add me ^_^
         this.browse("https://www.facebook.com/eby.j.barcelonista.bee.vhaa");
     }
 
     @FXML
     private void showFollow(MouseEvent event) {
+        //Animasi masuk dari sisi kiri
         new FadeInLeftTransition(btFacebook).play();
         new FadeInLeftTransition(fIcon).play();
         new FadeInLeftTransition(gIcon).play();
@@ -237,7 +226,7 @@ public class NewMainMenuAdminController implements Initializable, ControlledScre
     }
 
     public void browse(String url) {
-        //source dari mkyoung.com
+        //source dari mkyoung.com untuk membuka link ke browser
         String os = System.getProperty("os.name").toLowerCase();
         Runtime rt = Runtime.getRuntime();
 

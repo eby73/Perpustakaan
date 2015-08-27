@@ -13,7 +13,6 @@ import com.eby.orm.entity.User;
 import com.eby.main.ControlledScreen;
 import com.eby.main.ScreensController;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
@@ -47,7 +46,6 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     private TextField txtUserName;
     @FXML
     private PasswordField txtPasswd;
-    private ComboBox<String> cbMail;
     @FXML
     private ComboBox<String> cbLvl;
     @FXML
@@ -62,18 +60,12 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     private Button btRegAnggota;
     @FXML
     private Label labelValid;
-
     @FXML
     private TextField txtNamaAdmin;
     @FXML
     private TextField txtNamaAnggota;
-
     @FXML
     private TextField txtEmail;
-    private EmailValidator validdator;
-    private ScreensController screensController;
-    private Config con;
-    private RegAdminModel regModel;
     @FXML
     private GridPane grid1;
     @FXML
@@ -89,6 +81,11 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     @FXML
     private Text txtNotif;
 
+    private EmailValidator validdator;
+    private ScreensController screensController;
+    private Config con;
+    private RegAdminModel regModel;
+
     /**
      * Initializes the controller class.
      *
@@ -101,18 +98,22 @@ public class RegisterForAdminController implements Initializable, ControlledScre
         addcbLvl();
         con = new Config();
         fadeIn();
+        //dijalankan apabila hanya diperlukan
         Platform.runLater(() -> {
             txtEmail.setOnKeyReleased((KeyEvent event) -> {
                 validdator = EmailValidator.getInstance(true);
                 if (validdator.isValid(txtEmail.getText())) {
+                    //jika email valid, css class menjadi valid-label
                     labelValid.getStyleClass().remove("invalid-label");
                     labelValid.getStyleClass().add("valid-label");
                 } else {
+                    //jika email invalid, css class menjadi invalid-label
                     labelValid.getStyleClass().remove("valid-label");
                     labelValid.getStyleClass().add("invalid-label");
                 }
             });
         });
+        //txtNotif nonaktif
         txtNotif.setVisible(false);
 
     }
@@ -129,6 +130,7 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     }
 
     public void addcbLvl() {
+        //menambah item pada cbLevel
         ObservableList list = FXCollections.observableArrayList();
         list.addAll("admin", "operator");
         cbLvl.setItems(list);
@@ -140,7 +142,7 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     }
 
     public void saveAdmin() {
-        User user = new User();
+
         String nama = txtNamaAdmin.getText();
         String email = txtEmail.getText();
         String username = txtUserName.getText();
@@ -151,17 +153,21 @@ public class RegisterForAdminController implements Initializable, ControlledScre
             if (nama.equals("") || email.equals("") || username.equals("") || pass.equals("") || level.equals("")) {
                 con.dialog(Alert.AlertType.WARNING, "Isi data dengan lengkap !", null);
             } else {
+                //Kondisi mengecek validitas email
                 validdator = EmailValidator.getInstance();
                 if (validdator.isValid(email)) {
+                    //kondisi mengecek jumalah karakter password
                     if (pass.toCharArray().length < 6) {
                         con.dialog(Alert.AlertType.WARNING, "Password tidak memenuhi!", null);
                     } else {
+                        //set isi entity erdasarkan inputan dari node
+                        User user = new User();
                         user.setNama(nama);
                         user.setEmail(email);
                         user.setUsername(username);
                         user.setPasswd(pass);
                         user.setLevel(level);
-
+                        //eksekusi methode saveAdmin dari class RegAdminModel
                         regModel.saveAdmin(user);
 
                         clearAdmin();
@@ -179,15 +185,17 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     }
 
     public void clearAdmin() {
+        //set isi node ke default/kosong/""
         txtNamaAdmin.setText("");
         txtUserName.setText("");
         txtPasswd.setText("");
-        cbLvl.getSelectionModel().select(-1);
+        cbLvl.getSelectionModel().clearSelection();
         txtEmail.setText("");
 
     }
 
     public void clearAnggota() {
+        //set isi node ke default/kosong/""
         txtNIS.setText("");
         txtNamaAnggota.setText("");
         txtAlamat.setText("");
@@ -205,12 +213,13 @@ public class RegisterForAdminController implements Initializable, ControlledScre
             con.dialog(Alert.AlertType.WARNING, "Isi data dengan lengkap !", null);
 
         } else {
-
+            //set isi entity berdasarkan inputan dari node
             Anggota anggota = new Anggota();
             anggota.setId(Integer.valueOf(NIS));
             anggota.setNama(nama);
             anggota.setAlamat(alamat);
             anggota.setKelas(kelas);
+            //eksekusi methode saveAnggota dari class RegAdminModel
             regModel.saveAnggota(anggota);
             clearAnggota();
             con.dialog(Alert.AlertType.INFORMATION, "Register Berhasil !", null);
@@ -228,6 +237,7 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     }
 
     void fadeIn() {
+        //Animasi masuk dari sisi kiri
         new FadeInLeftTransition(grid1).play();
         new FadeInLeftTransition(labelValid).play();
         new FadeInLeftTransition(btRegisterAdmin).play();
@@ -239,6 +249,7 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     }
 
     void fadeOut() {
+        //Animasi keluar ke atas
         new FadeOutUpTransition(grid1).play();
         new FadeOutUpTransition(labelValid).play();
         new FadeOutUpTransition(btRegisterAdmin).play();
@@ -254,9 +265,11 @@ public class RegisterForAdminController implements Initializable, ControlledScre
     private void passKeyAction(KeyEvent event) {
         String pass = txtPasswd.getText();
         if (pass.equals("")) {
+            //jika pass masih kosong, maka txtNotif nonaktif
             txtNotif.setVisible(false);
         } else {
-            if (pass.toCharArray().length < 8) {
+            if (pass.toCharArray().length < 6) {
+                //jika karakter password <6 maka txtNotif aktif
                 txtNotif.setVisible(true);
             } else {
                 txtNotif.setVisible(false);
