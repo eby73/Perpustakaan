@@ -5,7 +5,6 @@
  */
 package com.eby.admin.book.edit;
 
-import com.eby.admin.book.view.ListBukuController;
 import com.eby.orm.dao.GenericDAO;
 import com.eby.orm.entity.Buku;
 import com.eby.orm.entity.Category;
@@ -18,7 +17,7 @@ import java.util.List;
  */
 public class BukuEditAdminModel {
 
-    BukuEditAdminController controller;
+    private BukuEditAdminController controller;
     private GenericDAO dao;
 
     public BukuEditAdminModel() {

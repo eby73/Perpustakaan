@@ -51,16 +51,16 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
     private ComboBox<String> cbPenerbit;
     @FXML
     private ListView<String> listCategory;
-
-    ScreensController screensController;
-    private CategoryListModel listModel;
-    private PenerbitComboBoxModel penComboModel;
-    private BukuEditAdminModel model;
-    private Config con;
     @FXML
     private Button btBackTo;
     @FXML
     private Button btBack;
+
+    private ScreensController screensController;
+    private CategoryListModel listModel;
+    private PenerbitComboBoxModel penComboModel;
+    private BukuEditAdminModel model;
+    private Config con;
 
     /**
      * Initializes the controller class.
@@ -157,7 +157,7 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
             con.dialog(Alert.AlertType.WARNING, "Isi data dengan lengkap !", null);
         }
     }
-    
+
     private void clear() {
         txtIdBuku.setText("");
         txtJudul.setText("");
