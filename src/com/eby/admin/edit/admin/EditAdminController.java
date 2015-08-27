@@ -56,25 +56,23 @@ public class EditAdminController implements Initializable, ControlledScreen {
     private PasswordField txtPasswd;
     @FXML
     private ComboBox<String> cbLevel;
-    private ComboBox<String> cbMail;
-    private TextField txtMail;
     @FXML
     private Button btUpdateAdmin;
     @FXML
     private TextField txtNamaAnggota;
     @FXML
     private TextField txtNamaAdmin;
-
-    private ScreensController screensController;
-    private Config con;
     @FXML
     private Button btBacktoMenu;
-    private EditAdminModel model;
-    private EmailValidator validator;
     @FXML
     private Label labelEmail;
     @FXML
     private Text txtNotif;
+
+    private ScreensController screensController;
+    private Config con;
+    private EditAdminModel model;
+    private EmailValidator validator;
 
     /**
      * Initializes the controller class.
@@ -83,26 +81,29 @@ public class EditAdminController implements Initializable, ControlledScreen {
     public void initialize(URL url, ResourceBundle rb) {
         initModel();
         addcbLvl();
+        //diajalankan apabila hanya diperlukan
         Platform.runLater(() -> {
             txtEmail.setOnKeyReleased((KeyEvent event) -> {
                 validator = EmailValidator.getInstance();
                 if (validator.isValid(txtEmail.getText())) {
-                    labelEmail.getStyleClass().remove("invalid-label");
-                    labelEmail.getStyleClass().remove("invalid-label");
-                    labelEmail.getStyleClass().remove("invalid-label");
+                    //mengubah icon menjadi valid-label jika email valid
                     labelEmail.getStyleClass().remove("invalid-label");
                     labelEmail.getStyleClass().add("valid-label");
                 } else {
+                    //menguah icon menjadi invalid-label jiak email invalid
                     labelEmail.getStyleClass().remove("valid-label");
                     labelEmail.getStyleClass().add("invalid-label");
                 }
             });
         });
+        //nonaktifkan txtNotif
         txtNotif.setVisible(false);
     }
 
     public void initModel() {
+        //inisialisasi objek model
         model = new EditAdminModel();
+        //set controller yang akan digunakan
         model.setController(this);
     }
 
@@ -117,6 +118,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void setDataAdmin(User user) {
+        //setDataAdmin ketika proses editAdmin
         txtId.setText(String.valueOf(user.getId()));
         txtNamaAdmin.setText(user.getNama());
         txtEmail.setText(user.getEmail());
@@ -131,6 +133,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void addcbLvl() {
+        //mengisi item untuk cbLevel
         ObservableList list = FXCollections.observableArrayList();
         list.addAll("admin", "operator");
         cbLevel.setItems(list);
@@ -142,6 +145,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void setDataAnggota(Anggota anggota) {
+        //setDataAnggota untuk proses editAnggota
         txtNIS.setText(String.valueOf(anggota.getId()));
         txtNamaAnggota.setText(anggota.getNama());
         txtAlamat.setText(anggota.getAlamat());
@@ -149,8 +153,6 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void updateAdmin() {
-        User user = new User();
-
         String id = txtId.getText();
         String nama = txtNamaAdmin.getText();
         String email = txtEmail.getText();
@@ -162,17 +164,22 @@ public class EditAdminController implements Initializable, ControlledScreen {
             con.dialog(Alert.AlertType.WARNING, "Isi data dengan lengkap !", null);
         } else {
             validator = EmailValidator.getInstance();
+            //membuat kondisi untuk cek validitas email
             if (validator.isValid(email)) {
+                //kondisi untuk cek jumlah karakter password
                 if (pass.toCharArray().length < 6) {
                     con.dialog(Alert.AlertType.WARNING, "Password tidak memenuhi", null);
                 } else {
+                    //set isi untuk entity berdasarkan inputan dari node
+                    User user = new User();
                     user.setId(Integer.valueOf(id));
                     user.setNama(nama);
                     user.setEmail(email);
                     user.setUsername(username);
                     user.setPasswd(pass);
                     user.setLevel(level);
-
+                    
+                    //eksekusi methode updateAdmin dari class EditAdminModel
                     model.updateAdmin(user);
 
                     clearAdmin();
@@ -186,6 +193,7 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void clearAdmin() {
+        //set isi node ke default/kosong/""
         txtId.setText("");
         txtNamaAdmin.setText("");
         txtUsername.setText("");
@@ -205,12 +213,13 @@ public class EditAdminController implements Initializable, ControlledScreen {
             con.dialog(Alert.AlertType.WARNING, "Isi data dengan lengkap !", null);
 
         } else {
-
+            //set isi entity berdasarkan inputan dari node
             Anggota anggota = new Anggota();
             anggota.setId(Integer.valueOf(NIS));
             anggota.setNama(nama);
             anggota.setAlamat(alamat);
             anggota.setKelas(kelas);
+            //eksekusi methode updateAnggota dari class EditAdminModel
             model.updateAnggota(anggota);
 
             clearAnggota();
@@ -219,27 +228,22 @@ public class EditAdminController implements Initializable, ControlledScreen {
     }
 
     public void clearAnggota() {
+        //set isi node ke default/kosong/""
         txtNIS.setText("");
         txtNamaAnggota.setText("");
         txtAlamat.setText("");
         txtKelas.setText("");
     }
 
-    private void refreshAnggotaAction(ActionEvent event) {
-        clearAnggota();
-    }
-
-    private void refreshAdminAction(ActionEvent event) {
-        clearAdmin();
-    }
-
     @FXML
     private void keyPassAction(KeyEvent event) {
         String pass = txtPasswd.getText();
         if (pass.equals("")) {
+            //jika pass masih ""/null/kosong, maka txtNotif masih nonaktif
             txtNotif.setVisible(false);
         } else {
             if (pass.toCharArray().length < 6) {
+                //jika karakter password <6 maka txtNotif aktif
                 txtNotif.setVisible(true);
             } else {
                 txtNotif.setVisible(false);
