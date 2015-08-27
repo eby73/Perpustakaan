@@ -70,6 +70,7 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
         initModel();
         initCategoryListModel();
         initPenerbitComboModel();
+        //inisialisasi objek con
         con = new Config();
     }
 
@@ -80,6 +81,7 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
 
     @FXML
     private void backtoMainAction(ActionEvent event) {
+        //setScreen ke menuUtama admins
         screensController.setScreen(Main.MenuUtamaAdminID);
     }
 
@@ -89,6 +91,7 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
     }
 
     public void setData(Buku buku) {
+        //methode setData ketika proses edit
         txtIdBuku.setText(String.valueOf(buku.getId()));
         txtJudul.setText(buku.getJudul());
         listCategory.getSelectionModel().select(buku.getCategory().getNama());
@@ -100,20 +103,29 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
     }
 
     public void initCategoryListModel() {
+        //inisialisasi objek listModel
         listModel = new CategoryListModel();
+        //menambahkan isi data dari category ke listModel
         listModel.addList(model.lisCat());
+        //mengeset isi data dari list model ke listCategory
         listCategory.setItems(listModel.getItems());
+        //bisa memilih lebih dari 1 category dengan menekan shift + click
         listCategory.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
     public void initPenerbitComboModel() {
+        //inisialisasi objek penComboModel
         penComboModel = new PenerbitComboBoxModel();
+        //menambahkan isi data dari penerbit ke penComboModel
         penComboModel.add(model.listPen());
+        //mengeset isi data dari penComboModel ke cbpenerbit
         cbPenerbit.setItems(penComboModel.getItems());
     }
 
     public void initModel() {
+        //inisialisasi objek model
         model = new BukuEditAdminModel();
+        //mengeset controller yang akan digunakan
         model.setController(this);
     }
 
@@ -133,22 +145,32 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
             buku.setId(Integer.valueOf(id));
             buku.setJudul(judul);
 
+            //getSelectedIndices artinya bisa memilih lebih dari 1 index dengan menekan shift + klik
             ObservableList<Integer> indices = listCategory.getSelectionModel().getSelectedIndices();
-            for (int i = 0; i < indices.size(); i++) {
-                Category cat = listModel.get(indices.get(i));
+            //menggunakan for-loop yang sama artinya dengan for(int i=0; i<idices.size; i++) untuk penyimpanan lebih dari 1 index
+            for (Integer indice : indices) {
+                //inisialisasi objek cat dengan isi index diatas
+                Category cat = listModel.get(indice);
+                //set index kedalam entity category
                 buku.setCategory(cat);
             }
 
+            //mengambil index dari cbPenerbit
             int index = cbPenerbit.getSelectionModel().getSelectedIndex();
             if (index != -1) {
+                //inisialisasi objek pen dengan isi index diatas
                 Penerbit pen = penComboModel.get(index);
+                //set index diatas kedalam entity penerbit
                 buku.setPenerbit(pen);
             }
 
+            //set isi semua entity dengan inputan dari masing2 node
             buku.setPengarang(pengarang);
             buku.setTahunTerbit(tahun);
             buku.setJumlahHalaman(jumlah);
             buku.setSynopsis(synopsis);
+
+            //eksekusi methode update dari class BukuEditAdminModel
             model.update(buku);
             clear();
 
@@ -159,18 +181,20 @@ public class BukuEditAdminController implements Initializable, ControlledScreen 
     }
 
     private void clear() {
+        //set semua inputan node ke default/kosong/""
         txtIdBuku.setText("");
         txtJudul.setText("");
         txtPengarang.setText("");
         txtJmlhHalaman.setText("");
         txtSynopsis.setText("");
         txtTahunTerbit.setText("");
-        listCategory.getSelectionModel().select(-1);
-        cbPenerbit.getSelectionModel().select(-1);
+        listCategory.getSelectionModel().clearSelection();
+        cbPenerbit.getSelectionModel().clearSelection();
     }
 
     @FXML
     private void backAction(ActionEvent event) {
+        //setScreen ke menuBuku
         screensController.setScreen(Main.MenuBukuID);
     }
 
