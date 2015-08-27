@@ -70,6 +70,7 @@ public class ListAnggotaAdminController implements Initializable, ControlledScre
             Anggota a = tableModel.getItem().get(index);
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Yakin ingin menghapus data?");
             alert.setHeaderText(null);
+            //menambahkan opsi tombol cancel
             alert.getButtonTypes().addAll(ButtonType.CANCEL);
             Optional<ButtonType> choose = alert.showAndWait();
             if (choose.get() == ButtonType.OK) {

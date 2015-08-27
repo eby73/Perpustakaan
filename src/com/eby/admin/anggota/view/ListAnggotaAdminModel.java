@@ -29,6 +29,7 @@ public class ListAnggotaAdminModel {
         this.controller = controller;
     }
 
+    //methode list untuk tampil data
     public List<Anggota> list() {
         return dao.getAll(Anggota.class);
     }
@@ -37,19 +38,8 @@ public class ListAnggotaAdminModel {
         dao.delete(a);
     }
 
+    //methode untuk pencarian data dengan nama
     public List<Anggota> findByName(String nama) {
         return dao.findData("nama", nama, Anggota.class);
     }
-    
-    
-    public Anggota findByID(int id) {
-        return dao.get(Anggota.class, id);
-    }
-    
-    public void saveOrUpdate(Anggota a){
-        dao.saveOrUpdate(a);
-    }
-    
-    
-
 }
