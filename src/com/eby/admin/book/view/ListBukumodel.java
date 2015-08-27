@@ -30,6 +30,7 @@ public class ListBukumodel {
         this.controller = controller;
     }
 
+    //methode getAll data
     public List<Buku> list() {
         return dao.getAll(Buku.class);
     }
@@ -38,6 +39,7 @@ public class ListBukumodel {
         dao.delete(buku);
     }
 
+    //methode pencarian dengan judul
     public List<Buku> findData(String keyword) {
         return dao.findData("judul", keyword, Buku.class);
     }

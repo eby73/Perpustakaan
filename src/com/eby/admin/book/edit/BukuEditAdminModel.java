@@ -44,10 +44,12 @@ public class BukuEditAdminModel {
         dao.delete(buku);
     }
 
+    //methode sebagai isi dari penComboModel
     List<Penerbit> listPen() {
         return dao.getAll(Penerbit.class);
     }
 
+    //methode sebagai isi dari listModel
     List<Category> lisCat() {
         return dao.getAll(Category.class);
     }
