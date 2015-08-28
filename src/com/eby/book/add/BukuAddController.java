@@ -61,14 +61,6 @@ public class BukuAddController implements Initializable, ControlledScreen {
     private TextField txtIdBuku;
     @FXML
     private Button btAdd;
-    private BukuAddModel model;
-    private CategoryListModel listModel;
-    private PenerbitComboBoxModel penComboModel;
-
-    private Config con;
-    private ListBukuController listBuku;
-
-    private ScreensController screenController;
     @FXML
     private GridPane gridPane1;
     @FXML
@@ -81,6 +73,13 @@ public class BukuAddController implements Initializable, ControlledScreen {
     private FontAwesomeIconView closeIcon;
     @FXML
     private AnchorPane paneView;
+
+    private BukuAddModel model;
+    private CategoryListModel listModel;
+    private PenerbitComboBoxModel penComboModel;
+    private Config con;
+    private ListBukuController listBuku;
+    private ScreensController screenController;
 
     /**
      * Initializes the controller class.
@@ -99,21 +98,30 @@ public class BukuAddController implements Initializable, ControlledScreen {
     }
 
     public void initModel() {
+        //inisialisasi objek model untuk mengatasi error nullpointer
         model = new BukuAddModel();
+        //set Controller yang akan digunakan
         model.setController(this);
 
     }
 
     public void initCategoryListModel() {
+        //inisialisasi objek listModel
         listModel = new CategoryListModel();
+        //menambahkan isi data dari category ke listModel
         listModel.addList(model.lisCat());
+        //mengeset isi data dari list model ke listCategory
         listCategory.setItems(listModel.getItems());
+        //bisa memilih lebih dari 1 category dengan menekan shift + click
         listCategory.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
     public void initPenerbitComboModel() {
+        //inisialisasi objek penComboModel
         penComboModel = new PenerbitComboBoxModel();
+        //menambahkan isi data dari penerbit ke penComboModel
         penComboModel.add(model.listPen());
+        //mengeset isi data dari penComboModel ke cbpenerbit
         cbPenerbit.setItems(penComboModel.getItems());
     }
 
@@ -134,22 +142,33 @@ public class BukuAddController implements Initializable, ControlledScreen {
             buku.setId(Integer.valueOf(id));
             buku.setJudul(judul);
 
+            //getSelectedIndices artinya bisa memilih lebih dari 1 index dengan menekan shift + klik
             ObservableList<Integer> indices = listCategory.getSelectionModel().getSelectedIndices();
-            for (int i = 0; i < indices.size(); i++) {
-                Category cat = listModel.get(indices.get(i));
+            //menggunakan for-loop yang sama artinya dengan for(int i=0; i<idices.size; i++) untuk penyimpanan lebih dari 1 index
+            for (Integer indice : indices) {
+                //inisialisasi objek cat dengan isi index diatas
+                Category cat = listModel.get(indice);
+                //set index kedalam entity category
                 buku.setCategory(cat);
             }
 
+            //mengambil index dari cbPenerbit
             int index = cbPenerbit.getSelectionModel().getSelectedIndex();
             if (index != -1) {
+                //inisialisasi objek pen dengan isi index diatas
                 Penerbit pen = penComboModel.get(index);
+                //set index diatas kedalam entity penerbit
                 buku.setPenerbit(pen);
             }
 
+            //set isi semua entity dengan inputan dari masing2 node
             buku.setPengarang(pengarang);
             buku.setTahunTerbit(tahun);
             buku.setJumlahHalaman(jumlah);
             buku.setSynopsis(synopsis);
+
+            //eksekusi methode save dari class BukuAddModel
+            
             model.save(buku);
             clear();
 
@@ -159,49 +178,8 @@ public class BukuAddController implements Initializable, ControlledScreen {
         }
     }
 
-    public void update() {
-
-        Buku buku = new Buku();
-        String id = txtIdBuku.getText();
-        String judul = txtJudul.getText();
-        int catId = listCategory.getSelectionModel().getSelectedIndex();
-        int penId = cbPenerbit.getSelectionModel().getSelectedIndex();
-        String pengarang = txtPengarang.getText();
-        String tahun = txtThnTerbit.getText();
-        String jumlah = txtJmlhHal.getText();
-        String synopsis = txtSynopsis.getText();
-
-        if (id != null && judul != null && catId != -1 && penId != -1 && pengarang != null) {
-
-            buku.setId(Integer.valueOf(id));
-            buku.setJudul(judul);
-
-            ObservableList<Integer> indices = listCategory.getSelectionModel().getSelectedIndices();
-            for (int i = 0; i < indices.size(); i++) {
-                Category cat = listModel.get(indices.get(i));
-                buku.setCategory(cat);
-            }
-
-            int index = cbPenerbit.getSelectionModel().getSelectedIndex();
-            if (index != -1) {
-                Penerbit pen = penComboModel.get(index);
-                buku.setPenerbit(pen);
-            }
-
-            buku.setPengarang(pengarang);
-            buku.setTahunTerbit(tahun);
-            buku.setJumlahHalaman(jumlah);
-            buku.setSynopsis(synopsis);
-            model.update(buku);
-            clear();
-
-            con.dialog(Alert.AlertType.INFORMATION, "Data berhasil di update !", null);
-        } else {
-            con.dialog(Alert.AlertType.WARNING, "idi sata dengan lengkap !", null);
-        }
-    }
-
     private void clear() {
+        //set semua inputan node ke default/kosong/""
         txtIdBuku.setText("");
         txtJudul.setText("");
         txtPengarang.setText("");
@@ -217,20 +195,13 @@ public class BukuAddController implements Initializable, ControlledScreen {
         this.save();
     }
 
-    public void test() {
-        System.out.println("lolossssssssssss !!!!!!");
-    }
-
-    public void addControlScreen() {
-        screenController.addControllerScreen("BukuController", (ControlledScreen) screenController.getScreen(Main.bukuAddId));
-    }
-
     @FXML
     private void closeAction(MouseEvent event) {
         fadeOut();
     }
 
     private void fadeIn() {
+        //Animasi Masuk melalui sisi kiri
         new FadeInLeftTransition(gridPane1).play();
         new FadeInLeftTransition(gridPane2).play();
         new FadeInLeftTransition(btAdd).play();
@@ -240,6 +211,7 @@ public class BukuAddController implements Initializable, ControlledScreen {
     }
 
     private void fadeOut() {
+        //Animasi keluar kek atas
         new FadeOutUpTransition(gridPane1).play();
         new FadeOutUpTransition(gridPane2).play();
         new FadeOutUpTransition(btAdd).play();
@@ -251,6 +223,7 @@ public class BukuAddController implements Initializable, ControlledScreen {
 
     @FXML
     private void comboReleased(KeyEvent event) {
+        //autocomplete untuk combobox
         new ComboBoxAutoComplete<>(cbPenerbit);
     }
 

@@ -40,12 +40,13 @@ public class ListAnggotaAdminController implements Initializable, ControlledScre
     private Button btDelete;
     @FXML
     private Button btBack;
+    @FXML
+    private TextField txtCari;
+
     private ListAnggotaAdminTableModel tableModel;
     private Config config;
     private ListAnggotaAdminModel model;
     private ScreensController screenController;
-    @FXML
-    private TextField txtCari;
 
     /**
      * Initializes the controller class.
