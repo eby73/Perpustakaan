@@ -11,7 +11,6 @@ import com.eby.main.ControlledScreen;
 import com.eby.main.ScreensController;
 import com.eby.main.Main;
 import com.eby.sql.connector.MySQLQuery;
-import com.mytdev.javafx.scene.control.AutoCompleteTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -62,13 +61,13 @@ public class LoginController implements Initializable, ControlledScreen {
     private Label lblWrong;
     private FontAwesomeIconView userIcon;
     private FontAwesomeIconView passIcon;
-    double w, h;
-    Rectangle2D rec2;
+    private Double w, h;
+    private Rectangle2D rec2;
     private Label lblUser;
     private Label lblPass;
-    Stage stage;
-    Config config;
-    ScreensController screenController;
+    private Stage stage;
+    private Config config;
+    private ScreensController screenController;
 
     /**
      * Initializes the controller class.
@@ -80,6 +79,7 @@ public class LoginController implements Initializable, ControlledScreen {
     public void initialize(URL url, ResourceBundle rb) {
         stage = new Stage();
         config = new Config();
+        //digunakan untuk memperoleh tinggi dan lebar screen
         rec2 = Screen.getPrimary().getVisualBounds();
         w = 0.1;
         h = 0.1;
@@ -91,6 +91,7 @@ public class LoginController implements Initializable, ControlledScreen {
         if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
             lblWrong.setText("Masukkan Username dan Password");
         } else {
+            //Membuat jeda eksekusi methode login selama 1 detik
             Thread.sleep(1000);
             this.login();
         }
@@ -116,8 +117,10 @@ public class LoginController implements Initializable, ControlledScreen {
                 lblWrong.setText("Login Succes !");
                 reset();
                 if (rs.getString("level").equalsIgnoreCase("admin")) {
+                    //jika level yang didapat adalah admin, maka setScreen ke Menu Utama Admin 
                     screenController.setScreen(Main.MenuUtamaAdminID);
                 } else {
+                    //jika level yang didapat adalah Operator, maka setScreen ke Menu Utama Operator 
                     screenController.setScreen(Main.menuUtamaOperatorID);
                 }
             } else {
@@ -131,6 +134,7 @@ public class LoginController implements Initializable, ControlledScreen {
     }
 
     public void reset() {
+        //set semua inputan node ke default/kosong/""
         txtUser.setText("");
         txtPass.setText("");
     }
@@ -139,15 +143,6 @@ public class LoginController implements Initializable, ControlledScreen {
     public void setScreenParent(ScreensController screenPage) {
         screenController = screenPage;
     }
-
-    public TextField getTxtUser() {
-        return txtUser;
-    }
-
-    public void setTxtUser(TextField txtUser) {
-        this.txtUser = txtUser;
-    }
-
     @FXML
     private void closeAction(ActionEvent event) {
         Platform.exit();
@@ -189,7 +184,8 @@ public class LoginController implements Initializable, ControlledScreen {
         }
     }
 
-    void fadeIn() {
+    public void fadeIn() {
+        //Animasi masuk melalui sisi kiri
         new FadeInLeftTransition(txtHeader).play();
         new FadeInLeftTransition(loginHeader).play();
         new FadeInLeftTransition(hBox).play();
@@ -203,9 +199,11 @@ public class LoginController implements Initializable, ControlledScreen {
     @FXML
     private void keyPressedAction(KeyEvent event) throws InterruptedException {
         if (event.getCode() == KeyCode.ENTER) {
+            //jika menekan enter maka eksekusi dijalankan
             if (txtUser.getText().equals("") || txtPass.getText().equals("")) {
                 lblWrong.setText("Masukkan Username dan Password");
             } else {
+                //Membuat jeda eksekusi methode login selama 1 detik
                 Thread.sleep(1000);
                 this.login();
             }
